@@ -1,0 +1,64 @@
+1. Covariate balance (ZIP level, 92 vs 117)
+  Resident population (000s): NL 5.688 LB 1.875 diff +3.812 (SE 1.011, p=0.000) norm +0.48
+  log population density: NL 2.133 LB 1.443 diff +0.690 (SE 0.556, p=0.215) norm +0.42
+  Distance to Albuquerque (mi): NL 193.912 LB 128.421 diff +65.491 (SE 14.734, p=0.000) norm +1.79
+  Distance to nearest NM city $\geq$50k (mi): NL 61.587 LB 78.267 diff -16.680 (SE 16.063, p=0.299) norm -0.44
+  Retail establishments per 1,000, 2019 (ZBP): NL 1.701 LB 2.370 diff -0.670 (SE 1.234, p=0.587) norm -0.08
+  Medical incumbents per 1,000, April 2022: NL 0.033 LB 0.019 diff +0.013 (SE 0.016, p=0.412) norm +0.10
+  Any medical incumbent, April 2022: NL 0.174 LB 0.043 diff +0.131 (SE 0.025, p=0.000) norm +0.43
+  Nonlegal-state residents within 75 mi (000s): NL 288.172 LB 0.023 diff +288.149 (SE 132.099, p=0.029) norm +1.24
+  Legal-state residents within 75 mi (000s): NL 11.042 LB 30.796 diff -19.754 (SE 8.936, p=0.027) norm -0.73
+
+2. Pooled nonlegal-border gap, robustness
+  Baseline (pooled Table 3 specification)                                ZIPs 209 (NL 92) +0.835(0.263)***  +0.109(0.045)**  +0.260(0.199)
+  + geography (density, distance to ABQ and to city $\geq$50k)           ZIPs 209 (NL 92) +0.448(0.347)  +0.075(0.072)  +0.348(0.287)
+  + geography + 2019 retail establishments                               ZIPs 209 (NL 92) +0.475(0.263)*  +0.081(0.052)  +0.320(0.262)
+  + geography + 2019 retail + medical incumbents                         ZIPs 209 (NL 92) +0.224(0.249)  +0.033(0.051)  +0.171(0.213)
+  Drop nonlegal ZIPs nearest Texas                                       ZIPs 129 (NL 12) -0.097(0.245)  -0.037(0.034)  -0.029(0.156)
+  Drop nonlegal ZIPs nearest Utah                                        ZIPs 199 (NL 82) +0.979(0.255)***  +0.132(0.047)**  +0.279(0.205)
+  Drop always-legal ZIPs nearest Colorado                                ZIPs 145 (NL 92) +1.013(0.406)**  +0.127(0.065)*  +0.382(0.338)
+  Drop always-legal ZIPs nearest Arizona                                 ZIPs 156 (NL 92) +0.666(0.212)***  +0.092(0.043)**  +0.196(0.161)
+  Drop largest nonlegal-border county (Doña Ana)                         ZIPs 184 (NL 67) +0.858(0.315)**  +0.107(0.058)*  +0.327(0.216)
+  Drop largest always-legal-border county (McKinley)                     ZIPs 190 (NL 92) +0.636(0.202)***  +0.083(0.039)**  +0.334(0.200)
+  Drop top 5\% of ZIPs by revenue per resident                           ZIPs 198 (NL 83) +0.544(0.178)***  +0.045(0.027)  -0.102(0.181)
+  50-mile exposure definition                                            ZIPs 127 (NL 54) +1.127(0.327)***  +0.166(0.051)***  +0.332(0.196)
+  100-mile exposure definition                                           ZIPs 272 (NL 133) +0.657(0.197)***  +0.091(0.037)**  -0.136(0.192)
+  Pooled control (adds 159 interior ZIPs)                                ZIPs 368 (NL 92) +0.575(0.244)**  +0.096(0.041)**  +0.284(0.139)**
+
+  County jackknife (23 leave-one-county-out fits):
+    Revenue per resident (asinh): min +0.636 max +0.956; p<0.05 in 23/23, p<0.10 in 23/23
+    Dispensaries per 1,000 (asinh): min +0.083 max +0.124; p<0.05 in 20/23, p<0.10 in 23/23
+    log revenue per dispensary: min +0.134 max +0.334; p<0.05 in 0/23, p<0.10 in 0/23
+
+3. Inference for the pooled baseline gap
+  Revenue per resident (asinh): b=+0.835 cluster SE 0.263 (p=0.004); WCR bootstrap p=0.004; Conley SE 50mi 0.222, 100mi 0.216
+  Dispensaries per 1,000 (asinh): b=+0.109 cluster SE 0.045 (p=0.025); WCR bootstrap p=0.035; Conley SE 50mi 0.045, 100mi 0.040
+  log revenue per dispensary: b=+0.260 cluster SE 0.199 (p=0.209); WCR bootstrap p=0.238; Conley SE 50mi 0.205, 100mi 0.199
+
+4. Functional form (pooled)
+  Revenue per resident, levels ($/qtr): +45.40 (17.31) p=0.016; LB mean 11.89
+  Dispensaries per 1,000, levels: +0.121 (0.072) p=0.107; LB mean 0.145
+  Any dispensary (LPM): +0.148 (0.053) p=0.011; LB mean 0.132
+  PPML revenue (log pop control): +0.892 (0.281) p=0.002 -> x2.44
+  PPML store count (log pop control): +0.664 (0.240) p=0.006 -> x1.94
+
+5. Continuous exposure measures, log(1 + E/1000); 209-ZIP sample and 368-ZIP pooled sample
+  [main] Nonlegal residents within 75 mi (baseline)       +0.174(0.052)***  +0.024(0.008)***  +0.043(0.034)   implied rpc gap at NL median exposure: +0.786
+  [main] Nonlegal residents within 50 mi                  +0.209(0.073)***  +0.032(0.009)***  +0.063(0.037)   implied rpc gap at NL median exposure: +0.533
+  [main] Nonlegal residents within 100 mi                 +0.161(0.043)***  +0.021(0.008)**  +0.025(0.027)   implied rpc gap at NL median exposure: +0.983
+  [main] Distance-decay, $e^{-d/25}$                      +0.265(0.076)***  +0.037(0.011)***  +0.037(0.030)   implied rpc gap at NL median exposure: +0.889
+  [main] Distance-decay, $e^{-d/50}$                      +0.350(0.086)***  +0.047(0.014)***  +0.035(0.045)   implied rpc gap at NL median exposure: +1.798
+  [main] Accessible residents within 75 mi$^{a}$          +0.178(0.053)***  +0.025(0.008)***  +0.041(0.032)   implied rpc gap at NL median exposure: +0.806
+  [main] Accessible, distance-decay $e^{-d/50}$$^{a}$     +0.308(0.069)***  +0.043(0.011)***  +0.030(0.033)   implied rpc gap at NL median exposure: +1.578
+  [pooled] Nonlegal residents within 75 mi (baseline)       +0.125(0.047)**  +0.021(0.007)***  +0.052(0.029)*   implied rpc gap at NL median exposure: +0.565
+  [pooled] Nonlegal residents within 50 mi                  +0.166(0.069)**  +0.030(0.008)***  +0.069(0.039)*   implied rpc gap at NL median exposure: +0.423
+  [pooled] Nonlegal residents within 100 mi                 +0.113(0.035)***  +0.019(0.006)***  +0.028(0.024)   implied rpc gap at NL median exposure: +0.690
+  [pooled] Distance-decay, $e^{-d/25}$                      +0.212(0.070)***  +0.037(0.009)***  +0.059(0.035)   implied rpc gap at NL median exposure: +0.712
+  [pooled] Distance-decay, $e^{-d/50}$                      +0.309(0.083)***  +0.047(0.011)***  +0.069(0.049)   implied rpc gap at NL median exposure: +1.586
+  [pooled] Accessible residents within 75 mi$^{a}$          +0.134(0.050)**  +0.022(0.007)***  +0.052(0.029)*   implied rpc gap at NL median exposure: +0.605
+  [pooled] Accessible, distance-decay $e^{-d/50}$$^{a}$     +0.290(0.070)***  +0.043(0.009)***  +0.057(0.041)   implied rpc gap at NL median exposure: +1.484
+  Horse race (rpc): accessible +0.491 (0.144) given raw 75-mi population
+  corr raw-accessible 1.000, raw-decay50 0.903
+  dynamic [Revenue per resident (asinh)] baseline 2022Q2 +0.459, 2026Q2 +0.858; controls 2022Q2 -0.153, 2026Q2 +0.246; max |diff| 0.612
+  dynamic [Dispensaries per 1,000 (asinh)] baseline 2022Q2 +0.017, 2026Q2 +0.081; controls 2022Q2 -0.059, 2026Q2 +0.005; max |diff| 0.076
+  dynamic [log revenue per dispensary] baseline 2022Q2 -0.355, 2026Q2 +0.664; controls 2022Q2 -0.359, 2026Q2 +0.587; max |diff| 0.125

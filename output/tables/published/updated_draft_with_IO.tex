@@ -1,0 +1,1227 @@
+
+\documentclass[english,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{caption}
+\DeclareCaptionFont{ninept}{\fontsize{9pt}{9pt}\selectfont}
+\usepackage{afterpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{changepage}
+\usepackage{color}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks,citecolor=blue,linkcolor=black,urlcolor=black]{hyperref}
+\usepackage{natbib}
+\usepackage{appendix}
+\usepackage{chngcntr}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{rotating}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\usepackage{lmodern}
+% CJE first submissions: main text double spaced; footnotes and references may be single spaced.
+\usepackage[flushmargin]{footmisc}
+\renewcommand{\footnotelayout}{\singlespacing}
+\usepackage[none]{hyphenat}
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+\begin{document}
+\sloppy
+\title{When Demand Crosses Borders: Market Entry and the Cannabis Border Premium}
+\author{Mahyar Rezazadeh\thanks{PhD Candidate, Department of Economics, Simon Fraser University. Email: \href{mailto:smr20@sfu.ca}{smr20@sfu.ca}}\\ {\small \emph{Simon Fraser University}}}
+\date{\today}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent How do local markets absorb new demand when firms can enter relatively freely, and which firms expand to serve it? We study recreational cannabis markets in New Mexico, where legalization created geographically concentrated demand from consumers in neighboring states where recreational sales remain illegal. Comparing ZIP codes near nonlegal-state borders with those near borders with states where cannabis was already legal, we find that captive cross-border demand substantially expands local markets: nonlegal-border ZIP codes support more dispensaries and generate more aggregate revenue, but do not exhibit systematically higher revenue per dispensary. The additional demand is therefore absorbed primarily through entry rather than higher revenue at incumbent stores.
+
+The composition and timing of this expansion are equally important. Independent retailers account for a larger long-run entry response than multi-store chains, yet chains respond earlier: they capture most of their eventual response immediately after legalization, while independent entry catches up within roughly a year. We develop an entry model with organizationally heterogeneous firms and a preparedness mechanism in which reusable organizational capital allows chains to prepare locations before legalization, explaining the difference in timing without requiring a permanent advantage in long-run profitability. In settled markets, the model finds a stronger demand response among independents and attributes more than 80 percent of the equilibrium entry response to them.
+
+Finally, a comparison with Colorado, where local rules constrain entry, suggests that tighter entry shifts more of the cross-border demand response toward revenue at incumbent stores rather than market expansion.
+
+
+\medskip
+\noindent \textbf{JEL classification:} L13, L51, H71, R12, K23 \\
+\noindent \textbf{Keywords:} Cannabis legalization; Cross-border demand; Market entry regulation; Free entry; Strategic entry game; Organizational form; Border premium
+\end{abstract}
+
+\doublespacing
+
+
+\section{Introduction and Related Literature}
+\label{sec:introduction}
+
+When a new source of demand reaches a local market, its effects depend on how easily firms can expand capacity and on which firms are able to respond. When entry is limited, a demand increase may primarily raise sales at incumbent firms. When entry is relatively open, higher returns can instead attract new firms, expanding market capacity and distributing the additional demand across a larger set of retailers. We study these margins using recreational cannabis markets in New Mexico, where differences in legalization across neighboring states create geographically concentrated demand and where firms can respond through entry.
+
+The setting provides a particularly clean way to study this supply-side response. Recreational cannabis sales began in New Mexico in 2022, while neighboring Texas, Oklahoma, and Utah continued to restrict recreational sales. Consumers living near these borders therefore faced a substantial difference in legal access, and the cost of reaching a legal retailer depended on the location of the retailer. A large literature shows that consumers respond to differences in taxes, prices, and regulations across nearby jurisdictions by shifting purchases across borders, with these responses declining as travel costs increase \citep{KanburKeen1993,Nielsen2001,AsplundFribergWilander2007,Lovenheim2008,ChandraHeadTappata2014}. In cannabis markets, \citet{HaoCowan2020} document purchases by consumers from neighboring nonlegal states, while \citet{HansenMillerWeber2020} show that Washington retailers near Oregon experienced a sharp decline in sales after Oregon legalized recreational cannabis. These studies establish that legalization can create economically important cross-border demand; our question is what happens on the supply side when retailers can respond to that demand through entry.
+
+We compare New Mexico ZIP-code markets near borders with nonlegal states to markets near borders with states where recreational cannabis was already legal. The comparison holds proximity to a state border fixed while changing the legal access of consumers on the other side. We further measure exposure using both the distance to the relevant state line and the population living across it, so that the demand opportunity reflects not only whether a market is near a border but also how many potential consumers it can reach. The evidence shows that markets exposed to nonlegal-state demand support substantially more dispensaries and generate substantially more aggregate dispensary revenue. Yet revenue per dispensary is not systematically higher. The same demand opportunity therefore expands the market primarily through entry rather than through a persistent revenue advantage for individual stores.
+
+This distinction connects the paper to the literature on entry and market structure. The entry-threshold framework of \citet{BresnahanReiss1990,BresnahanReiss1991} emphasizes that market size determines how many firms a market can support, while \citet{BerryReiss2007} places this relationship within a broader framework in which entry and competition jointly determine market structure. Our setting allows this logic to be applied to a geographically concentrated demand shock. Rather than observing only how incumbent firms perform when demand changes, we observe whether the market itself expands in response. The result is economically important because a demand shock that produces higher sales for incumbents has different implications for competition and market power from one that attracts additional firms.
+
+The ability of firms to enter, however, is unlikely to be the only relevant margin. Firms differ in organizational form, and those differences can affect both the profitability and timing of entry. A multi-store chain can draw on capabilities accumulated across locations, while an independent opening its first store must build many of those capabilities itself. The literature on retail entry and organization shows that organizational form can shape competitive responses and market structure \citep{Mazzeo2002,Seim2006,AdamsEtAl2018,Sadun2015}. Research on retail networks further emphasizes the advantages and costs associated with operating multiple locations, including economies of density and the possibility that a new store diverts sales from existing stores \citep{Nishida2008,Holmes2011,Jia2008}. These considerations imply that two firms facing the same local demand opportunity need not respond in the same way.
+
+Our data reveal an important distinction between the amount and the timing of entry. Chains respond more quickly when recreational sales begin, capturing a large share of their eventual entry response immediately after legalization. Independent retailers respond more gradually and catch up within roughly one year. After this initial adjustment, the two organizational forms are statistically indistinguishable in their entry response. Thus, the early chain advantage is not a persistent difference in the amount of entry generated by the two types; it is a difference in how quickly they can act on a newly available opportunity.
+
+This timing pattern motivates a second contribution of the paper. We develop a model in which chains and independent retailers face the same long-run demand opportunity but differ in their ability to prepare for entry before that opportunity becomes exploitable. Before legalization, a firm can invest in a contingent entry project by identifying a location, arranging financing, preparing licensing materials, or adapting an existing store format. These activities have value once legalization makes the market commercially accessible because a more prepared project can begin operating sooner. The idea is related to research showing that pre-entry capabilities and experience can affect firms' ability to enter and develop new markets \citep{Lee2008,Moeen2017}. We use this insight to distinguish two margins that are difficult to separate in a conventional static entry model: the amount of demand that makes entry profitable and the organizational capability that determines how quickly a firm can act on that opportunity.
+
+The model formalizes preparedness as a stock of reusable organizational capital that lowers the cost of preparing a new location. Established chains have accumulated regulatory knowledge, financing relationships, supplier relationships, standardized store formats, and site-selection routines across previous locations. Independent firms opening their first store have less of this reusable capital. Chains can therefore arrive at legalization with a larger share of their eventual entry projects already prepared, allowing them to respond sooner even if independent and chain retailers face similar profitability once their stores are operating. After legalization, both types face the same institutional process for completing licensing and opening requirements. The model consequently predicts an initial chain advantage that gradually disappears as independent firms complete their preparation, which is the pattern observed in the data.
+
+This mechanism also clarifies why the timing result matters for the literature on retail organization. Existing work has shown that chains may benefit from scale, networks, and accumulated experience \citep{EllicksonHoughtonTimmins2013,HollenbeckGiroldo2022,Jia2008}, while research on independent and chain retailers documents differences in their competitive behavior \citep{AdamsEtAl2018,TalamasMarcos2025}. Our evidence adds a dynamic dimension to this distinction. Organizational advantages need not determine only whether a firm enters; they can determine when it is able to respond to a new market opportunity. The same demand shock can therefore produce a chain-heavy initial expansion even when independent retailers ultimately respond at a similar or greater rate.
+
+The paper then asks whether the organizational difference persists after the initial transition. We estimate an entry game with separate pools of independent and chain potential entrants, allowing the profitability of each type to respond differently to captive cross-border demand. This approach builds on the empirical entry literature, including \citet{BresnahanReiss1991}, \citet{Mazzeo2002}, and \citet{Seim2006}, while allowing organizational form to matter directly for the demand response. In the equilibrium estimated from post-transition markets, independent entry is more responsive to captive demand than chain entry. Thus, the organizational advantage changes over the life of the market: chains act first, but independent retailers exhibit the stronger response once the initial adjustment has taken place.
+
+One possible explanation is that an established chain evaluates a new location as part of an existing network. A new store may generate additional sales from the newly available cross-border consumers, but it can also divert customers from the chain's nearby stores. This trade-off is central to the literature on chain expansion and network economies \citep{Nishida2008,Holmes2011,Jia2008}. We therefore test whether the chain response to captive demand is weaker when an operator already has stores near the candidate location. The estimated interaction has the predicted sign but is not statistically distinguishable from zero, so the evidence does not establish own-network cannibalization as the source of the difference between independent and chain entry. The structural result is therefore interpreted as a difference in the response to captive demand rather than as evidence for a particular underlying mechanism.
+
+The interaction between the two organizational forms also matters for interpreting entry. The estimated cross-type effect is negative, meaning that, conditional on the model's observed demand variables, markets with more firms of one type tend to be associated with higher estimated entry profitability for the other. Such a relationship could reflect genuine economic forces, including product differentiation, retail clustering, or information about market attractiveness. The idea that the presence of an existing firm can reveal information about market profitability is related to the information-spillover mechanism in \citet{CaplinLeahy1998} and the learning and market-structure effects discussed by \citet{ToivanenWaterson2005}. At the same time, the relationship could reflect unobserved market characteristics that attract both types of firms. We therefore do not interpret the negative cross-type coefficient as evidence that one type's entry causally induces entry by the other.
+
+The role of entry restrictions provides a final link to the literature. \citet{Thomas2019} shows that restrictions on cannabis retail licenses can limit entry and generate welfare costs, while \citet{HollenbeckUetake2021} show that entry restrictions can increase market power in cannabis retailing. More broadly, the literature on retail entry documents how barriers to entry affect both the number of firms and the returns earned by incumbents \citep{CarreeThurik1996,SchivardiViviano2011}. We use Colorado as a descriptive comparison because local governments there have greater authority to restrict cannabis retail entry. The border premium in dispensary density is weaker than in New Mexico, while the evidence points toward a larger role for revenue at existing stores. Although the cross-state comparison is not a causal estimate of entry regulation, it is consistent with the broader implication of our framework: when entry is constrained, a demand opportunity is less likely to be absorbed through additional firms and more likely to accrue to existing retailers.
+
+Taken together, the paper connects three questions that are usually studied separately. First, does geographically concentrated cross-border demand expand the local market or primarily raise the returns of existing firms? Second, when entry occurs, which organizational forms respond and how does their response evolve over time? Third, how does the ability of firms to enter affect the way a market absorbs the demand opportunity? Our evidence shows that, in a relatively open-entry environment, captive cross-border demand expands retail capacity primarily through additional entry. Chains respond first, consistent with a preparedness advantage, while independent retailers catch up and ultimately exhibit the stronger settled-market response. The Colorado comparison further suggests that when entry is more constrained, a larger share of the demand opportunity is absorbed by incumbent retailers. These results place firm organization, entry timing, and market regulation at the center of how localized demand shocks translate into market structure.
+
+The remainder of the paper is organized as follows. Section~\ref{sec:framework} presents the conceptual framework and defines the border comparison. Section~\ref{sec:data} describes the data and institutional setting. Section~\ref{sec:empirical} presents the empirical strategy. Sections~\ref{sec:result1}--\ref{sec:composition} establish the market-level, entry, and organizational-composition results. Section~\ref{sec:model} develops the entry game and the preparedness mechanism. Section~\ref{sec:identification} discusses identification and estimation, and Section~\ref{sec:modelfit} evaluates the model's fit. Section~\ref{sec:counterfactuals} presents the counterfactuals and the test of the own-network mechanism. Section~\ref{sec:falsification} reports the robustness checks, Section~\ref{sec:discussion} discusses the Colorado comparison, and Section~\ref{conclusion} concludes.
+
+
+
+
+\section{Conceptual Framework}
+\label{sec:framework}
+
+We begin with a simple benchmark for how captive cross-border demand affects local market structure. The framework also motivates the comparison between nonlegal-border and legal-border ZIP codes, which helps distinguish demand created by differences in recreational cannabis access from the broader characteristics of border markets.
+
+The model builds on the spatial competition framework of \citet{Salop1979} and the entry literature of \citet{BresnahanReiss1991}. Consumers face travel costs when visiting a store, each store incurs a fixed operating cost, and firms enter when expected profits justify that cost. The central implication is that a larger market can support more stores without necessarily increasing the revenue earned by each store. We then consider how this prediction changes when entry is restricted and why firms with different organizational capabilities may enter at different times.
+
+\paragraph{Setup.}
+Consider a local market in which stores compete for consumers distributed uniformly across space. Each consumer purchases one unit from a store and incurs a travel cost that increases with distance. Let $S$ denote the number of consumers served by the market in a given period. In the application, $S$ includes local residents and potential customers from neighboring states.
+
+The relevant distinction is whether consumers across the state line have access to legal recreational cannabis retailers in their home state. Markets near nonlegal-state borders may attract additional customers who lack that option, whereas markets near legal-state borders face competition from retailers operating across the border. Let $NL$ denote ZIP codes near nonlegal-state borders and $LB$ denote ZIP codes near legal-state borders. Holding other determinants of demand constant, the captive-demand mechanism implies $S_{NL}>S_{LB}$. Interior ZIP codes provide an additional comparison but are not assigned a particular position in this demand ranking.
+
+Firms first decide whether to enter the market and where to locate, and then compete on price. We assume that additional cross-border demand expands the geographic area served by the market while leaving consumer density approximately unchanged. Thus, markets attracting more cross-border customers are modeled as covering a larger area rather than serving a more densely populated one. This assumption allows us to examine how access to a larger geographic market affects store entry and the geographic distribution of stores when consumers face travel costs.
+
+\paragraph{Free entry.}
+In a spatial market, the profitability of a store depends partly on its distance from competing outlets. Nearby competitors limit the number of customers a store can attract and the price it can charge. When entry is unrestricted, entry continues until the market reaches a free-entry equilibrium in which no additional firm can earn positive expected profits.
+
+Let $t$ denote the travel cost per unit of distance, $f$ the fixed cost of operating a store, and $\rho$ the density of consumers. These parameters determine the equilibrium geographic distribution and the customer base needed to cover operating costs. Let $\bar q$ denote the break-even number of customers per store and $\bar p$ the corresponding equilibrium price.\footnote{In the symmetric circular-city model with linear travel costs, inelastic unit demand, and evenly spaced stores, price competition and the zero-profit condition imply $\bar q=\sqrt{\rho f/t}$ and $\bar p=c+\sqrt{tf/\rho}$, where $c$ is marginal cost. These expressions abstract from integer constraints on the number of stores and other sources of heterogeneity. They illustrate the relevant comparative static: when market size increases through geographic expansion at constant consumer density, equilibrium store size and price do not depend on total market size.}
+
+The free-entry condition is
+\begin{equation}
+\label{eq:zeroprofit}
+(\bar p-c)\bar q=f.
+\end{equation}
+When demand expands, existing stores may initially serve more customers and earn higher profits. These profits attract additional entry, which increases competition and reduces the customer base available to each store. In the free-entry equilibrium, the typical store again serves $\bar q$ customers.
+
+Because $\bar q$ is independent of total market size under the maintained assumptions, the equilibrium number of stores is
+\begin{equation}
+\label{eq:nstar}
+n^\ast=\frac{S}{\bar q}.
+\end{equation}
+A larger market therefore supports more stores, while equilibrium revenue per store remains $\bar p\bar q$. Total market revenue, $\bar p S$, increases with the number of consumers served. When some of those consumers live outside the market, both the number of stores and aggregate revenue can also increase relative to the local resident population.
+
+This result provides the main benchmark for New Mexico. If captive cross-border demand expands the effective market and entry remains relatively open, exposed ZIP codes should support more dispensaries and generate greater aggregate revenue without necessarily exhibiting higher revenue per dispensary. The prediction concerns the market after entry has adjusted. During the transition, stores already operating may temporarily benefit from additional demand before new competitors enter.
+
+
+\paragraph{Constrained entry.}
+The adjustment differs when regulation limits the number of stores. Suppose the market is restricted to $\bar n<n^\ast$ stores. If demand expands while this restriction remains binding, the additional consumers must be served by the existing outlets. In the symmetric benchmark, customers per store increase to $S/\bar n$, above the free-entry level $\bar q$. With fewer competing stores than under free entry, the market may also sustain higher prices.
+
+The distinction is therefore between two margins of adjustment. Under free entry, additional demand supports more outlets. Under a binding entry restriction, the number of outlets cannot fully adjust, so more of the demand is reflected in revenue per store. A binding numerical cap implies no further entry once the limit is reached, although less restrictive licensing requirements may simply weaken or delay the entry response.
+
+We use Colorado data to provide a descriptive test of how cross-border demand is accommodated when retail entry is more constrained. Unlike New Mexico, where entry is relatively open, Colorado has more restrictive local licensing regulations that may limit retail expansion. This comparison allows us to examine whether cross-border demand is associated with a weaker entry response and higher revenue per store in a more regulated market.
+
+\paragraph{Organizational form and entry timing.}
+The free-entry benchmark explains how the number of stores responds to a larger market, but it does not determine which firms enter or how quickly they do so. These questions matter in New Mexico, where independent retailers and multi-store chains respond differently to the opening of the recreational market.
+
+The empirical analysis distinguishes two aspects of this response. Chains expand more quickly after legalization, while independent retailers respond more gradually and catch up over approximately the following year.
+
+We will develope the model by a prepredness mechanism in Section~\ref{sec:model} that provides an explanation for the difference in timing. Firms can undertake preparations before legalization, including identifying locations, securing financing, and developing plans for regulatory approval. These preparations are costly, but their cost may be lower for firms that can reuse organizational capital accumulated through earlier store openings. Chains may therefore enter legalization with a larger share of potential projects already prepared, allowing them to respond sooner. Independent firms can still enter the same markets, but may need more time to complete the necessary preparations.
+
+The settled-state entry model accordingly allows the profitability response to captive demand to differ between independent retailers and chains. Its estimates indicate a stronger response for independents, consistent with their larger contribution to the equilibrium entry change in the counterfactual analysis. The two results are not contradictory: chains can be better prepared to enter immediately even when independent retailers account for more of the eventual market expansion.
+
+\paragraph{Predictions.}
+The framework yields four predictions that guide the empirical analysis.
+
+\begin{description}
+
+\item[P1 (market expansion).]
+With relatively free entry, captive cross-border demand increases the number of dispensaries and aggregate cannabis revenue relative to the local resident population.
+
+\item[P2 (revenue per store).]
+As entry adjusts to additional demand, competition limits persistent increases in revenue per dispensary. Under the spatial free-entry benchmark, the larger market supports more stores rather than higher equilibrium revenue per store.
+
+\item[P3 (organizational composition and timing).]
+If chains have lower costs of preparing new locations before legalization, they can respond to captive demand earlier than independent retailers. Independent entry can catch up as preparation is completed, while the eventual distribution of entry across organizational forms depends on their respective profitability responses to captive demand.
+
+\item[P4 (entry constraints).]
+When entry restrictions bind, captive cross-border demand produces a weaker increase in dispensary density and a greater increase in revenue per store than under free entry.
+
+\end{description}
+
+The framework provides a benchmark for interpreting the relationship between cross-border demand, market entry, and store revenue. Its central implication rests on the assumption that additional demand expands the effective market without substantially changing consumer density or operating costs. Because the data do not distinguish between prices and quantities sold, revenue per store captures both margins of adjustment. The empirical analysis examines how cross-border demand affects entry and revenue, while the organizational models help explain differences in the timing and composition of entry.
+
+
+
+
+\section{Background}
+\label{sec:background}
+
+New Mexico provides a useful setting for studying how retail markets respond to demand from consumers across state borders. Recreational cannabis sales began on April 1, 2022, following the passage of the Cannabis Regulation Act in 2021. Unlike states that restrict the number of retail licenses, New Mexico does not impose a statewide numerical cap on dispensaries. The Cannabis Control Division issues licenses through an administrative process in which applicants must satisfy zoning, security, and inspection requirements. Although opening a store still requires time and investment, the absence of a statewide license cap allows the number and location of dispensaries to respond to differences in local demand.
+
+The opening of the recreational market did not mean that every retailer started from the same position. Medical cannabis was already legal in New Mexico, and existing medical licensees were permitted to begin recreational sales when the new market opened. In our data, 304 storefronts were selling medical cannabis before April 2022. These businesses entered the recreational market with operating locations already in place, while other firms had to establish new outlets. This distinction matters when examining how quickly different types of retailers responded to the new market opportunity.
+
+New Mexico's location creates substantial variation in the demand available to retailers. Three neighboring states, Texas, Oklahoma, and Utah, did not permit recreational cannabis sales at any point during the sample period. Consumers living in these states therefore lacked legal recreational retailers in their home markets. By contrast, Colorado and Arizona had established recreational cannabis markets before New Mexico legalized sales, in 2014 and 2021, respectively. Retailers near these borders faced consumers who already had legal purchasing options closer to home.
+
+These differences create the central design of treatment group in the paper. Dispensaries near nonlegal-state borders may attract customers who would otherwise have no legal recreational purchasing option in their home state. Dispensaries near borders with Colorado and Arizona do not face the same source of captive demand. Comparing these markets allows us to examine whether access to additional cross-border consumers is associated with more retail entry, greater market revenue, and differences in the organizational composition of retailers.
+
+Colorado provides a second setting for examining how market adjustment may differ when entry is more restricted. Like New Mexico, Colorado has no statewide numerical cap on retail licenses. However, Colorado delegates substantial licensing authority to local governments, and many counties and municipalities restrict or prohibit cannabis retailers. Colorado therefore shares borders with nonlegal states but operates under a more restrictive local entry environment. We use Colorado data in Section~\ref{sec:discussion} to provide a descriptive comparison of how cross-border demand is accommodated when retail entry faces greater regulatory constraints.
+
+
+\section{Data}
+\label{sec:data}
+
+We combine administrative cannabis sales records, retail licensing information, and geographic and population data to construct a quarterly panel of New Mexico retail markets from 2022Q2 through 2026Q2. The data allow us to observe where dispensaries operate, how much revenue they generate, and whether their operators have other locations in the state. We supplement these records with measures of nearby population and the legal status of recreational cannabis in neighboring states.
+
+
+Our primary source is the New Mexico Cannabis Control Division's Cannabis Reporting Online Portal \citep{NMCCDReporting}, which reports monthly gross medical and recreational cannabis sales for each licensee at each reported address. We measure revenue as total gross sales, including both medical and recreational transactions, and aggregate monthly sales to the quarter. Over the sample period, reported sales total \$2.31 billion, of which 27 percent are medical.
+
+We define a storefront as a unique licensee-address pair and geocode its location using the U.S.\ Census Bureau's batch geocoder. The resulting dataset contains 1,255 storefronts. A storefront is considered active in a quarter if it reports positive sales during that quarter. We assign each storefront to the ZIP code of its reported address. Thirteen storefronts report ZIP codes that are not valid New Mexico ZIP codes, reflecting transposed digits, P.O.\ box codes, or an out-of-state prefix. We assign these observations to the nearest valid ZIP code by distance and retain the reported ZIP codes for all other storefronts.
+
+
+We link storefronts to their operators using licensee names and trade names, identifying 652 distinct operators. Because the analysis examines both the organizational composition of markets and the characteristics of firms at the time they enter, we use two definitions of organizational form.
+
+For the descriptive analysis of market composition in Facts 1--3, an operator is classified as a \emph{chain} if it operates at least two New Mexico storefronts at any point during the sample period, and as an \emph{independent} otherwise. Under this definition, 181 operators are chains, accounting for 784 of the 1,255 storefronts. The composition outcomes measure the number of distinct independent and chain operators active in each ZIP code and quarter. This definition assigns a consistent organizational type to each operator throughout the sample.
+
+For the entry game and mechanism analysis in Sections~\ref{sec:settledgame}--\ref{sec:counterfactuals}, we instead classify storefronts according to their operator's status when the location first reports sales. An entry is classified as \emph{established multi-store} if the operator already runs another New Mexico storefront at that time. Otherwise, it is classified as an independent entry, including when the storefront is the first location of an operator that subsequently expands. This definition uses information available at entry and does not retrospectively reclassify a firm's first location after it opens additional stores.
+
+Among the 1,232 storefronts active during the sample, 370 are established multi-store entries, 395 are first locations of operators that later expand, and 467 belong to operators that never open a second storefront. The distinction between the two classifications is important: the first describes the organizational composition of the observed market, while the second distinguishes firms with an existing operating network from those opening their first New Mexico location. The latter is particularly relevant to the preparedness mechanism, which concerns the advantages firms may carry into a new entry decision.
+
+
+ZIP-code population and geographic centroids come from the SimpleMaps U.S.\ ZIP database \citep{SimpleMapsZIP}. To measure the potential demand available across state borders, we combine Census Bureau population data \citep{CensusPopEst2023,CensusBlocks2020} with cartographic boundary files \citep{CensusCountyShapefile}. These sources allow us to calculate the number of residents of neighboring states within a given distance of each New Mexico ZIP-code centroid.
+
+We also use 2020 Census block populations to measure the number of residents within 1 and 2 kilometers of individual dispensaries \citep{CensusBlocks2020}. Population is measured using a single vintage and remains constant throughout the sample.
+
+
+We also use several other dataset for the placebo exercises in Section~\ref{sec:falsification}, including gross receipts for alcohol and grocery retailers from the New Mexico Taxation and Revenue Department \citep{NMTRDGrossReceipts} and establishment information from the Census Bureau's ZIP Codes Business Patterns \citep{CensusZBP}. For the Colorado comparison, county-level cannabis sales come from the Colorado Department of Revenue \citep{COMarijuanaSalesByCounty}, while dispensary counts are reconstructed from Marijuana Enforcement Division license records \citep{COMedLicensees}.
+
+
+We define border exposure using geography rather than observed retail activity, so the classification does not depend on where firms choose to open stores. A ZIP code is classified as Border ZIP if its centroid is within 75 miles of that border and at least 1,000 residents of the neighboring state live within 75 miles of the centroid. The population requirement excludes sparsely populated border areas where proximity to another state provides access to relatively few potential customers. For store-level analyses, we apply the same rule using each dispensary's location.
+
+This definition divides New Mexico's 368 ZIP codes into three groups. The \emph{nonlegal-border} group contains 92 ZIP codes exposed to Texas, Oklahoma, or Utah, where consumers had no legal recreational purchasing option in their home state during the sample. The \emph{always-legal-border} group contains 117 ZIP codes exposed to Colorado or Arizona but not to a nonlegal-state border. The remaining 159 ZIP codes form the \emph{interior} group, which is not exposed to any state border under our definition.
+
+Fourteen ZIP codes, primarily near the Four Corners region and in northeastern New Mexico, are exposed to both a legal-state and a nonlegal-state border. We classify them as nonlegal-border ZIP codes because they have access to the additional demand associated with consumers in nonlegal states.
+
+Our main comparison is between nonlegal-border and always-legal-border ZIP codes. Both groups are located near a state line, but they differ in whether consumers across that line have access to legal recreational retailers in their home state. This comparison helps distinguish the role of captive cross-border demand from characteristics shared by border locations more generally, although it does not eliminate other differences between the two groups. Interior ZIP codes are excluded from the main comparison and enter only selected robustness exercises. This distinction also means that the 28 ZIP codes in the Albuquerque metropolitan area, all classified as interior, do not enter the main sample.
+
+Figure~\ref{fig:exposure_map} shows the geographic distribution of the three groups and the corresponding differences in retail activity. Pooling observations across quarters, nonlegal-border ZIP codes have 0.41 dispensaries per 1,000 residents and \$95 in quarterly revenue per resident, compared with 0.19 dispensaries and \$34 in always-legal-border ZIP codes. Interior ZIP codes fall between these groups, with 0.28 dispensaries per 1,000 residents and \$60 in quarterly revenue per resident.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_nm_exposure_map.png}
+\caption{Border exposure in New Mexico. Panel (a): ZIP-code centroids by exposure group, with marker area increasing in average dispensaries per 1,000 residents over 2022Q2--2026Q2. Neighboring states are shaded red if they had no adult-use market during the sample (Texas, Oklahoma, Utah) and blue if they did (Colorado, Arizona). Panel (b): dispensaries per 1,000 residents (solid bars, left axis) and quarterly revenue per resident (hatched bars, right axis), computed as group totals divided by group population over all ZIP-quarters.}
+\label{fig:exposure_map}
+\end{figure}
+
+For the entry game, we construct a continuous measure of captive-demand exposure, $B_{zt}$, defined as the number of nonlegal-state residents within 75 miles of a ZIP-code centroid. This measure captures variation in the size of the potential cross-border customer base beyond the binary border classification. It is positive for nonlegal-border ZIP codes and zero, or close to zero, for the other groups.
+
+
+The main empirical sample is a balanced panel of 209 nonlegal-border and always-legal-border ZIP codes observed over 17 quarters, from 2022Q2 to 2026Q2, yielding 3,553 ZIP-quarter observations. Because the administrative records report sales for every licensee each month, a ZIP code without reported sales in a quarter is treated as having no operating dispensary rather than as a missing observation.
+
+%These zero observations are an important feature of the data. In the main sample, 79 percent of ZIP-quarters have no active dispensary. Retaining them allows the analysis to capture not only differences in the number of stores operating in established retail markets, but also whether a market supports any dispensary at all. This extensive margin is central to understanding how additional demand translates into entry.
+
+Table~\ref{tab:samples} summarizes the samples used throughout the paper. We measure market size using total quarterly dispensary revenue divided by resident population and dispensary density as the number of active stores per 1,000 residents. Revenue per dispensary is calculated as total quarterly sales divided by the number of active stores and is defined for the 755 main-sample ZIP-quarters with at least one dispensary. To study organizational composition, we count the distinct independent and chain operators active in each ZIP code and quarter.
+Revenue per resident, dispensary density, and operator counts enter the regressions using the inverse hyperbolic sine transformation, which accommodates observations with zero activity. Revenue per dispensary enters in logarithms.
+
+
+We also construct an unbalanced panel of the 1,232 storefronts reporting positive sales during the sample. Each store is observed in the quarters in which it operates, yielding 10,653 storefront-quarter observations. The main store-level outcome is quarterly revenue divided by the number of residents living within 1 kilometer of the store, with a 2-kilometer radius used as an alternative measure.
+Stores with fewer than 100 residents within 1 kilometer, or fewer than 250 within 2 kilometers, are excluded from the sample. These restrictions prevent very small population denominators from generating extreme values.
+
+For additional falsification tests we use three alternative samples to assess whether the main results depend on the comparison group, the timing of market entry, or the definition of a local market.
+The first adds the 159 interior ZIP codes to the control group, producing a pooled-control sample of 368 ZIP codes. This broader comparison examines whether the estimated nonlegal-border premium is sensitive to using only always-legal-border markets as the reference group.
+
+The second restricts attention to the 125 ZIP codes that operate a dispensary in at least one quarter. For each ZIP code, we retain observations beginning with its first active dispensary and include market-age fixed effects. This specification examines differences in market size after retail activity has begun. It also addresses differences in the timing of initial entry, since always-legal-border markets opened their first dispensaries later on average.
+
+The third aggregates storefronts to 78 town markets, excluding Albuquerque. ZIP codes are postal units and do not necessarily correspond to the geographic markets within which consumers choose among stores. Aggregating to towns therefore provides a check on whether the findings depend on ZIP-code boundaries. Albuquerque is excluded because it is an interior market substantially larger than the other towns. Its exclusion does not affect the main border comparison, but prevents this unusually large market from dominating specifications that include interior locations.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Samples}
+\label{tab:samples}
+\input{tab_data_samples.tex}
+\begin{minipage}{0.97\textwidth}
+\vspace{0.4em}\footnotesize
+\textit{Notes:} All New Mexico samples cover 2022Q2--2026Q2 (17 quarters); the county panel covers 2022Q2--2025Q2. ``Units'' gives the number of ZIP codes, towns, dispensaries, or counties, split in parentheses into nonlegal-border / always-legal-border (/ interior) units; for the county panel, New Mexico / Colorado. Observations are unit-quarters. Clusters are counties, except for the town panel (towns) and the entry game (ZIP codes, bootstrap). The dispensary panel includes a store only in quarters in which it reports sales. The entry-game sample excludes Albuquerque and keeps ZIP-quarters at least eight quarters after the ZIP code's first dispensary (Section~\ref{sec:identification}).
+\end{minipage}
+\end{table}
+
+
+Table~\ref{tab:sumstats_disp} provides a complementary view at the dispensary level. Stores in nonlegal-border and always-legal-border markets have similar average revenue and revenue per nearby resident. They also have similar shares of chain operators, established multi-store entries, and locations that were operating in the medical market before recreational sales began. The more pronounced differences concern the surrounding market: nonlegal-border dispensaries have more residents within 1 kilometer and more competing stores within 25 miles.
+
+These store-level comparisons are useful because the larger aggregate markets near nonlegal-state borders do not necessarily imply proportionately larger sales at individual stores. The descriptive evidence instead points to an important distinction between the size of the retail market and the revenue earned by a typical outlet, which the subsequent regressions examine more systematically.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Summary statistics, New Mexico dispensary panel}
+\label{tab:sumstats_disp}
+\input{tab_data_sumstats_disp.tex}
+\begin{minipage}{0.97\textwidth}
+\vspace{0.4em}\footnotesize
+\textit{Notes:} Dispensary-quarter observations in which the store reports positive sales, 2022Q2--2026Q2. Columns (1), (2), and (4) report means, with standard deviations in brackets. Column (3) reports the coefficient from a regression of the variable on a nonlegal-border indicator in the sample of nonlegal- and always-legal-border stores, without controls; standard errors clustered by county in parentheses. ``Operating at market opening'' marks stores that reported medical sales before adult-use sales began in April 2022. $^{b}$Residents within 1 km (2 km) from 2020 Census blocks; stores with fewer than 100 (250) such residents, or without a matched block population, are excluded from this row. $^{*}p<.10$, $^{**}p<.05$, $^{***}p<.01$.
+\end{minipage}
+\end{table}
+
+
+Several features of the data shape the interpretation of the results. Sales are observed only from the opening of the recreational market, so the analysis compares markets with different exposure to cross-border demand after legalization rather than estimating the effect of legalization itself. We also do not observe where customers live. Cross-border demand is therefore measured using the size and proximity of neighboring-state populations, not observed purchases by out-of-state consumers.
+
+In addition, the sales records report revenue but not transaction prices or quantities. Differences in revenue per dispensary consequently combine variation in prices and the volume of sales. Finally, population is measured at a single point in time and includes residents below the legal purchasing age. These limitations do not prevent comparisons of market entry and revenue across locations, but they restrict the conclusions that can be drawn about consumer origins, prices, and quantities.
+
+
+
+\section{Empirical Strategy}
+\label{sec:empirical}
+
+The analysis in Sections~\ref{sec:result1}--\ref{sec:composition} estimates how local cannabis markets respond to captive cross-border demand. Specifically, we compare New Mexico ZIP codes located near borders with states where recreational cannabis remains illegal to ZIP codes located near borders with states where recreational cannabis was already legally available. Both groups are close to a state boundary, but only the former are exposed to an additional pool of consumers who must cross into New Mexico to purchase cannabis legally. Legalization generated a relatively sharp market-opening shock, so it created a legal retail market adjacent to states where recreational access remained unavailable. Nonlegal-border markets experienced an increase in potential demand that always-legal-border markets did not. Our estimates capture how this spatially demand difference is reflected in local market outcomes, including the number of retailers, revenue, and the composition of entrants.
+
+ We estimate the average treatment effect on the treated (ATT) of captive cross-border demand from a boundary-discontinuity comparison across New Mexico's state lines: nonlegal-border ZIP codes against always-legal-border ZIP codes. To do so, the following specification is used as our baseline estimation:
+
+\begin{equation}
+\label{baseline}
+%\operatorname{asinh}(y_{zt})=\alpha
+%+
+%\beta\, \text{Nonlegal}_z
+%+
+%\gamma \log(\text{Population}_z)
+%+
+%\delta_t
+%+
+%\varepsilon_{zt}.
+\log(y_{zq}) = \alpha + \sum_q \beta_q\big(\text{Border}_z \times \mathbb{1}[\text{Quarter}=q]\big) + \gamma\log(\text{Population}_z) + \delta_q + \varepsilon_{zq}
+\end{equation}
+
+where \(q_0=2022\text{Q2}\) is the first quarter of the sample and serves as the reference period. The dynamic specification allows the difference between control and treated ZIP codes to vary across quarters. \(y_{zq}\) denotes the outcome variable for ZIP code \(z\) in quarter \(q\), that includes revenue per resident, dispensary density (dispensaries per 1,000 residents) and revenue per dispensary. 
+The $population_z$ control is the logarithm of ZIP-code population, which accounts for differences in local market size and ensures that estimated differences are not driven simply by larger populations near certain borders. The key feature of the specification is the interaction between the nonlegal-border indicator ($Border_z$) and quarter-specific indicators, which traces how the relative outcomes of nonlegal-border markets evolve throughout the sample period.
+
+The quarter fixed effects, \(\delta_q\), absorb changes common to all New Mexico ZIP codes in a given quarter, including statewide trends and seasonality. Standard errors are clustered at the county level. For revenue per dispensary, which is defined only for ZIP codes with positive store counts, we estimate the analogous specification using log revenue per dispensary and the same quarter-specific interactions.
+
+
+The coefficient \(\beta_{q_0}\) captures the difference between nonlegal-border and always-legal-border ZIP codes in the reference quarter, 2022Q2. Each subsequent coefficient \(\beta_q\) measures the change in this differential relative to the reference quarter. For example, a positive \(\beta_q\) indicates that the gap between nonlegal-border and always-legal-border ZIP codes became larger in quarter \(q\) than it was in 2022Q2, while a coefficient close to zero indicates that the relative difference remained similar to the reference period. If we impose: \[\beta_q=\beta_{q_0}\quad \forall q.\] specification \ref{baseline} will turn to it's static version.
+Under this restriction, the quarter-specific interactions collapse to a single nonlegal-border coefficient.
+
+More generally, the dynamic specification provides a descriptive profile of how the relative outcomes of nonlegal-border and always-legal-border ZIP codes evolve after legalization. Because the specification does not rely on a conventional treatment-timing framework in which units receive treatment at different dates, we interpret the coefficients as changes in relative gaps over time rather than as event-time treatment effects in a standard difference-in-differences design.
+
+
+Equation~\eqref{baseline} is re-estimated under three additional samples, reported alongside the main result in every table. The pooled-control sample restores the interior ZIP codes dropped from the main specification, redefining $\text{Nonlegal}_z$ against always-legal-border and interior ZIP codes combined. The town-level aggregation re-estimates equation~\eqref{baseline} on a full panel of New Mexico town-markets. 
+
+The conditional-on-activity specification focuses on the 125 ZIP codes that record at least one dispensary during the sample period and includes a market-age control, $\theta_{\text{age}(z,t)}$, that captures the market age as a time varying control in the ZIP code where the retail activity is observed.  
+
+We examine the composition of entry by estimating separate regressions for independent and chain dispensaries. This yields type-specific estimates, $\hat{\beta}_I$ and $\hat{\beta}_C$, which correspond directly to the entry game's profitability-response parameters, $\delta_I$ and $\delta_C$, for the two types of potential entrants.
+ The composition of entrant is estimated as two separate regressions, one per organizational type, so that the reduced-form coefficients $\hat\beta_I$ and $\hat\beta_C$ map directly onto the structural entry game's own type-specific parameters, $\delta_I$ and $\delta_C$.
+ 
+The specification~\eqref{eq:composition} is applied separately to the independent and chain dispensary counts, with the same $\operatorname{asinh}$ transformation in the main specification (since a ZIP-quarter can record zero independent or zero chain dispensaries) and the same market-age control in the conditional-on-activity secondary specification:
+\begin{equation}
+\label{eq:composition}
+\operatorname{asinh}(N^\tau_{zt})=\alpha_\tau
++
+\beta_\tau\, \text{Nonlegal}_z
++
+\gamma_\tau \log(\text{Population}_z)
++
+\delta_{\tau,t}
++
+\varepsilon_{\tau,zt}, \qquad \tau \in \{I, C\},
+\end{equation}
+The specification \ref{eq:composition} is estimated as two separate regressions rather than a single differenced outcome, so that $\hat\beta_I$ and $\hat\beta_C$ can each be read separately as border effect on the number of type $\tau$ store.
+
+The identifying assumption is that, absent captive cross-border demand, nonlegal- and always-legal-border ZIP codes would exhibit similar composition of retailers. That assumption may not hold mechanically, since the two groups could differ in remoteness, local commercial activity, or other characteristics related to the particular state border they face. We therefore assess the robustness of the comparison in several ways, including replacing the discrete $\text{Nonlegal}_z$ indicator with a continuous measure of border distance and population exposure, varying the border-exposure threshold to 50 and 100 miles, examining non-cannabis sectors as placebo outcomes, and repeating the analysis using the pooled-control, town-level, and conditional-on-activity samples described above. Section~\ref{sec:falsification} presents these checks in detail.
+
+\section{Results}
+
+\subsection{Existence of Captive Cross-Border Demand}
+\label{sec:result1}
+
+Table~\ref{tab:fact1fact2} shows how the market outcome difference between nonlegal-border and always-legal-border ZIP codes evolve over time. The pattern is particularly clear for revenue per resident and dispensary density: the gap grows through the first two years of the sample before moderating somewhat thereafter. For revenue per resident, the coefficient reaches $0.954$ in 2024Q2, which corresponds to an approximately $160\%$ higher level of revenue per resident in nonlegal-border relative to always-legal-border ZIP codes. The difference remains substantial thereafter, with revenue per resident approximately $127\%$ higher in 2025Q3.
+
+Dispensary density follows a similar pattern, although the differences are smaller in magnitude. In 2022Q2, nonlegal-border ZIP codes have approximately $2\%$ higher dispensary density than always-legal-border ZIP codes. This difference increases to about $18\%$ by 2024Q2 and remains at roughly $12\%$ in 2025Q3, indicating that the gap in retail capacity widens as the market develops and persists into the later quarters.
+
+Revenue per dispensary, in contrast, shows no systematic difference between the two groups. None of these estimates is statistically distinguishable from zero. Thus, the growing difference in market-level revenue and dispensary density is not accompanied by a statistically detectable difference in revenue per store.
+
+
+
+\begin{table}[htbp]
+\centering\scriptsize
+\input{tab_fact1fact2_dynamic.tex}
+\caption{Quarter-specific nonlegal- vs.\ always-legal-border coefficients $\hat\beta_q$ for revenue per resident, dispensary density, and revenue per store. Sample: full New Mexico ZIP-code panel, 2022Q2--2026Q2 (368 ZIP codes, zero-inclusive; revenue-per-store column restricted to ZIP-quarters with at least one operating dispensary). Each $\hat\beta_q$ is the nonlegal-vs.\ always-legal-border gap in that quarter. Revenue-per-resident and density columns in inverse-hyperbolic-sine units; revenue-per-store column in logs. All quarters include $\log(\text{population})$ and calendar-quarter fixed effects; standard errors (in parentheses) clustered by county. $^{*}p<.10$ $^{**}p<.05$ $^{***}p<.01$.}  %}
+\label{tab:fact1fact2}
+\end{table}
+
+\FloatBarrier
+
+The ZIP-level revenue difference can be decomposed into two distinct margins: the number of dispensaries serving the local population and the revenue generated by each dispensary. Because revenue per resident equals dispensary density multiplied by revenue per dispensary, the estimates in Table~\ref{tab:fact1fact2} allow us to identify which margin accounts for the higher market-level revenue near nonlegal-state borders. The difference in revenue per dispensary is not statistically distinguishable from zero between ZIP codes near nonlegal-state borders and those near always-legal borders, while the difference in dispensary density is statistically significant. Figure~\ref{fig:dynamic_legalcontrol} shows the corresponding ZIP-level pattern for the nonlegal- versus always-legal-border comparison. Taken together, the evidence indicates that the higher revenue observed near nonlegal-state borders is driven primarily by the extensive margin, with more dispensaries serving these markets rather than individual stores generating systematically higher revenue. This pattern is consistent with the free-entry mechanism(P2).
+
+
+Another way to check the free entry mechanism is to estimate the dispensary-level regression, which follows individual stores over time and accounts for persistent differences across brands using brand fixed effects. The specification also controls for local characteristics within 1-km and 2-km radii of each dispensary. This allow us to compare the outcome of each dispensary in the non-legal border vs always legal ones. Figure~\ref{fig_dispensary} plots the dispensary-level border coefficients for revenue per local resident using the legal-border control group. The estimates fluctuate around zero without a systematic upward trend, suggesting that captive cross-border demand does not translate into persistently higher revenue for individual incumbent stores.
+
+Together, the ZIP-level decomposition and the dispensary-level panel support the same conclusion from two different levels of aggregation: captive cross-border demand is absorbed primarily by an increase in the number of operating dispensaries, not by a persistent increase in revenue at the stores that are already there. This is the pattern predicted by a free-entry model (Section~\ref{sec:framework}): additional demand attracts entrants until the typical store is again near its break-even size, so the demand advantage shows up as market breadth rather than incumbent rents.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=18 cm]{fig_nm_dynamic_legalcontrol.png}
+\captionsetup{font=ninept}
+\caption{Dynamic captive cross-border demand estimates, nonlegal-border ZIP codes versus the always-legal-border control group. Nonlegal-border ZIP codes: 38; always-legal-border ZIP codes: 19 (116-ZIP sample vintage). County-clustered 95\% confidence intervals, reference quarter 2022Q2.}
+\label{fig:dynamic_legalcontrol}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig_eventstudy_nm_dispensary_revperresident_1km_vs_2km.png}
+\captionsetup{font=ninept}
+\caption{Revenue per local resident, dispensary-level panel, one- versus two-kilometre denominator. County-clustered 95 percent confidence intervals.}
+\label{fig_dispensary}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Entrant Composition }
+\label{sec:composition}
+
+
+Our results so far raise two related questions about the firms: which types of firms respond to the new demand opportunity, and how fast they can take advantage of it. We use specification (\ref{type_reg}) to examine how cross-border demand shapes the timing of retail expansion across organizational types. In particular, we examine whether cross-border demand generates a faster initial expansion among chains and whether independent operators catch up as the market matures. The indicator $\text{Nonlegal}_z$ equals one for ZIP codes bordering states without legal recreational cannabis sales, while $\mathbb{1}[t=q]$ equals one in quarter $q$, with $q_0$ as the omitted reference period. The coefficient $\beta_q$ captures the difference in retailer presence between nonlegal-border and always-legal-border markets in quarter $q$ for the baseline organizational group, while $\theta_q$ measures how this difference varies for independent operators relative to chains. Thus, $\beta_q+\theta_q$ gives the corresponding difference for independents. The evolution of these coefficients allows us to assess whether chains respond more quickly to cross-border demand and whether independent operators subsequently narrow the gap in retail expansion.
+
+We control for local market size using $\log(\text{Population}_{zt})$, with coefficient $\gamma$. Group fixed effects, $\lambda_\tau$, account for average differences between chains and independent operators, while quarter fixed effects, $\delta_t$, absorb shocks common to both groups. The term $\varepsilon_{\tau zt}$ captures remaining variation. Because the dependent variable uses the inverse hyperbolic sine transformation, the coefficients describe differences in transformed operator counts rather than exact percentage changes, particularly in markets with few or no retailers.
+
+\begin{equation}
+\label{type_reg}
+\begin{aligned}
+\operatorname{asinh}(N_{\tau zt})
+={}&
+\alpha
++
+\sum_{q \neq q_0}
+\beta_q
+\left(
+\text{Nonlegal}_{z}
+\times
+\mathbb{1}[t=q]
+\right)
+\\
+&+
+\sum_{q \neq q_0}
+\theta_q
+\left(
+\text{Nonlegal}_{z}
+\times
+\mathbb{1}[\tau=I]
+\times
+\mathbb{1}[t=q]
+\right)
+\\
+&+
+\gamma \log(\text{Population}_{zt})
++
+\lambda_{\tau}
++
+\delta_t
++
+\varepsilon_{\tau zt}.
+\end{aligned}
+\end{equation}
+
+
+
+
+
+The estimates in Table \ref{table:fact3dynamic} reveal a clear difference in the timing of the response. Immediately following legalization, chains respond to captive cross-border demand more quickly than independent retailers. In 2022Q2, the estimated chain response corresponds to approximately 24.5\% more chain dispensaries in nonlegal-border ZIP codes relative to always-legal-border ZIP codes, while the independent stores do not respond to cross border demand. The independent-minus-chain difference remains negative and statistically significant through the first four quarters (the third column), indicating that chains account for a larger share of the initial entry response.
+
+This early difference is economically informative because it shows that the two organizational forms do not simply respond with different amounts of entry; they reach the market at different speeds. Established chains can evaluate and implement a new location using an existing organization, operating procedures, supplier relationships, and experience with multiple outlets, whereas an independent retailer entering for the first time must build these capabilities around a new location. The retail-network literature emphasizes that operating multiple stores can generate organizational and network advantages that affect firms' expansion and location decisions \citep{EllicksonHoughtonTimmins2013,Holmes2011}. The early chain response is consistent with these advantages allowing established operators to act more quickly when a new spatial demand opportunity emerges.
+
+The initial difference however, narrows as independent entry increases. By 2023Q2 ( year after the legalization), independent retailers have caught up with chains, and the independent and chain numbers converge together. Thus, the evidence points to a difference in the timing of entry rather than a persistent difference in responsiveness: chains move into these markets earlier, while independent retailers follow and eventually respond at a similar rate.
+
+This pattern suggests that organizational composition is itself an important margin through which local markets adjust to new demand. Although the same spatial demand opportunity is initially taken up more quickly by established chains, independent retailers subsequently enter and eventually reach a similar level of response, meaning that the two organizational forms can have comparable longer-run responses while following different paths of adjustment. This difference in timing can shape the evolution of local competition and ownership during the market's expansion, even when the total number of stores ultimately converges across the two types.
+
+The faster initial response by chains could reflect several features of established operators, including network advantages, greater access to financing, lower expansion costs, or greater experience with opening new locations. Because the reduced-form evidence cannot distinguish among these explanations, we do not interpret the timing difference as evidence of any particular mechanism. Instead, it provides a natural motivation for the model in Section~\ref{sec:model}, where we examine the firm-level incentives that can lead different organizational forms to respond differently to the same spatial demand opportunity, and in particular why these differences may appear in the timing and composition of entry.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_fact3_diff.png}
+\caption{The figure plots $\hat\beta_{I,q}-\hat\beta_{C,q}$, the third column of Table~\ref{tab:fact3}. The difference is estimated in one regression that stacks the independent
+and chain outcomes and interacts the nonlegal-border indicator, the type indicator, and calendar-quarter fixed effects,
+with a common control for log population.}
+\label{fig:fact3diff}
+\begin{minipage}{\textwidth}
+\vspace{0.4em}\footnotesize
+\end{minipage}
+\end{figure}
+
+\begin{table}[htbp]
+
+\centering\scriptsize
+\input{tab_fact3_dynamic.tex}
+\caption{Quarter-specific coefficients for independent brands, chain brands, and their difference (independent minus chain), nonlegal- vs.\ always-legal-border ZIP codes. Same sample and controls as Figure~\ref{fig:fact3diff}; standard errors (in parentheses) clustered by county. $^{*}p<.10$ $^{**}p<.05$ $^{***}p<.01$.}
+\label{table:fact3dynamic}
+\end{table}
+
+
+\FloatBarrier
+
+\bigskip
+
+\section{A Strategic Entry Game for ZIP-Code Markets}
+\label{sec:model}
+
+Section~\ref{sec:composition} shows that chains and independent retailers do not respond to captive cross-border demand at the same time. Chains respond earlier, capturing much of their eventual response immediately after legalization, while independent entry increases more gradually and catches up within roughly a year. Once this adjustment has taken place, the two organizational forms are statistically indistinguishable. The model in this section is designed to explain this timing pattern and to ask what differences across firms could generate it.
+
+Our starting point is deliberately simple. We assume that chains and independents face the same long-run demand opportunity and move through the same post-legalization process for opening a new store. The key difference is instead how prepared each type is to act when that opportunity first becomes available. An established chain can draw on organizational resources accumulated through operating other stores, including knowledge of the regulatory process, relationships with lenders and suppliers, standardized store formats, and experience identifying and preparing potential sites. These resources can allow a chain to prepare prospective locations before legalization, even when those locations cannot yet begin serving recreational customers. An independent retailer, by contrast, has fewer existing organizational resources that can be redeployed across locations and may therefore need more time to prepare an entry project once the opportunity becomes available.
+
+This mechanism generates a simple prediction for the adjustment path. If chains enter legalization with more locations already prepared or close to being ready, their response should appear earlier, while independent retailers should gradually close the gap as they move through the same process of preparing and opening stores. Importantly, the mechanism does not require chains to have higher long-run profitability. It instead generates a difference in the timing of entry that can disappear once both types have had sufficient time to respond to the new demand opportunity. This is precisely the distinction suggested by the empirical pattern.
+
+The model therefore provides a way to connect the observed transition path to an economically interpretable source of heterogeneity in firms' ability to respond to a new spatial demand opportunity. Sections~\ref{sec:preparedness}--\ref{sec:saturation} develop this preparedness mechanism and characterize how the initial difference between chains and independents evolves as entry proceeds.
+
+Section~\ref{sec:settledgame} considers a separate question that arises once the market has had time to adjust. Following the entry-threshold approach of \citet{BresnahanReiss1991}, \citet{Mazzeo2002}, and \citet{Seim2006}, we ask whether the long-run profitability response to captive cross-border demand differs between independent and chain entrants. This part of the analysis addresses a different margin from the preparedness mechanism: rather than explaining why one type enters earlier, it asks whether the two types face different profitability incentives once the market has settled. We then consider network internalization, drawing on the logic of \citet{Nishida2008} and \citet{Holmes2011}, as a candidate explanation for such a difference and test its central prediction directly in the data. The direct test does not support that mechanism, so we keep the two exercises conceptually separate: the first explains the observed difference in the timing of entry, while the second investigates whether a persistent difference in profitability can account for organizational differences after the market has adjusted.
+
+
+\subsection{Economic environment}
+\label{sec:environment}
+
+The unit of analysis is a ZIP-code market $z$ in quarter $t$. Each market-period has two ex ante heterogeneous pools of potential entrants: pool $I$, consisting of independent retailers entering their first location, and pool $C$, consisting of established multi-store operators considering an additional outlet. Within each pool, potential entrants are indexed by $k=1,2,\ldots$, following the entry-threshold approach of \citet{BresnahanReiss1990,BresnahanReiss1991} and \citet{Mazzeo2002}. The index $k$ is an ordering device rather than a literal arrival sequence: it captures the idea that the $k$-th potential entrant faces $k-1$ same-type entrants if those firms enter, so that the profitability of an additional entrant falls as the market becomes more crowded. This allows the model to focus on the equilibrium number of entrants without assigning a particular entry order or identity to firms that are otherwise ex ante identical within each organizational type.
+
+The $k$-th independent potential entrant's profit from entering, given $N^C_{zt}$ active chain rivals and $k-1$ active independent rivals ahead of it in the ranking, is:
+\begin{equation}
+\label{eq:piI}
+\pi^I_{zt}(k)
+=
+\kappa_I
++
+\beta_I \log L_{zt}
++
+\delta_I \log(1+B_{zt})
+-
+\gamma_{II}(k-1)
+-
+\gamma_{IC}N^C_{zt}
++
+\varepsilon^I_{k,zt}.
+\end{equation}
+Similarly, the $k$-th chain potential entrant's profit from entering is:
+\begin{equation}
+\label{eq:piC}
+\pi^C_{zt}(k)
+=
+\kappa_C
++
+\beta_C \log L_{zt}
++
+\delta_C \log(1+B_{zt})
+-
+\gamma_{CC}(k-1)
+-
+\gamma_{CI}N^I_{zt}
++
+\varepsilon^C_{k,zt}.
+\end{equation}
+Here, $L_{zt}$ is the resident population of ZIP code $z$, while $B_{zt}$ measures captive cross-border demand, defined as the population living within 75 miles across a nonlegal-state line and equal to zero for always-legal-border and interior ZIP codes. The parameter $\kappa_\tau$, for $\tau\in\{I,C\}$, is a type-specific profitability intercept net of entry costs; without a cost shifter that varies within type, the model does not separately identify the fixed cost of entry from this intercept. The parameter $\delta_\tau$ captures how the profitability of type $\tau$ responds to captive cross-border demand. The $\gamma_{\tau\tau'}$ parameters capture the reduction in profitability associated with competition from same and other type entrants, which gives the model its entry-threshold structure. For an independent entrant, each additional independent retailer reduces the profitability of another independent entrant by $\gamma_{II}$, while each chain retailer reduces it by $\gamma_{IC}$. The corresponding effects for a chain entrant are governed by $\gamma_{CC}$ and $\gamma_{CI}$. Consequently, even when a market offers a large demand opportunity, entry does not continue indefinitely: as more retailers enter, competition reduces the profitability of another store until the marginal entrant is no longer sufficiently profitable to enter.
+The baseline model in Sections~\ref{sec:preparedness}--\ref{sec:saturation} imposes:
+\begin{equation}
+\label{eq:equal_demand_response}
+\delta_I
+=
+\delta_C
+\equiv
+\delta
+>
+0.
+\end{equation}
+
+Thus, the two organizational types are assumed to face the same long-run profitability response to captive cross-border demand. This restriction is consistent with the empirical pattern in Table~\ref{tab:fact3}, where the responses of the two types become statistically indistinguishable after the initial adjustment period. The model therefore does not require a permanent difference in the demand response of chains and independents to generate different entry patterns during the transition. Section~\ref{sec:settledgame} relaxes this restriction as a separate exercise and asks whether the two pools nevertheless differ in their profitability response once the market has had time to settle.
+
+A fully flexible competitive structure would allow $\gamma_{II}$, $\gamma_{CC}$, $\gamma_{IC}$, and $\gamma_{CI}$ to differ. In our setting, however, the numbers of independent and chain entrants are jointly determined by the same local demand conditions, making all four competitive effects difficult to identify separately. We therefore impose the parsimonious restriction
+\begin{equation}
+\label{eq:competition_restriction}
+\gamma_{II}
+=
+\gamma_{CC}
+\equiv
+\gamma_{\mathrm{same}},
+\qquad
+\gamma_{IC}
+=
+\gamma_{CI}
+\equiv
+\gamma_{\mathrm{other}}.
+\end{equation}
+
+Under this restriction, an additional same-type entrant reduces a firm's profit by $\gamma_{\mathrm{same}}$, while an additional entrant of the other type reduces it by $\gamma_{\mathrm{other}}$. This specification retains the economically important distinction between competition within and across organizational forms while limiting the number of competitive parameters to those that the data can reasonably support. The unrestricted four-parameter specification is estimated separately as an identification diagnostic in Section~\ref{sec:identification}.
+
+\begin{proposition}[Demand expands entry]
+\label{prop:demandentry}
+Holding $L_{zt}$ fixed, equilibrium total entry
+$N^{I*}_{zt}+N^{C*}_{zt}$
+is weakly increasing in $B_{zt}$ whenever
+$\delta_I,\delta_C\geq0$.
+\end{proposition}
+The economic interpretation is straightforward: when more consumers are available through captive cross-border demand, entering the market becomes more profitable for both types of firms. This attracts additional entry, which in turn increases competitive pressure and reduces the profitability of subsequent entrants. The market therefore responds to the additional demand by supporting more firms, rather than requiring each existing firm to serve a permanently larger customer base.
+
+\subsection{Preparedness capital and the organizational asymmetry}
+\label{sec:preparedness}
+Proposition~\ref{prop:demandentry} establishes that greater captive cross-border demand allows a market to support more firms, but it does not explain why chains and independent retailers respond at different speeds. Section~\ref{sec:composition} shows that this timing difference is concentrated around the opening of the market: chains respond earlier, while independent retailers take longer to reach a similar level of entry. The mechanism developed here focuses on this transition. Rather than assuming that chains earn higher profits from operating a store, we allow them to differ from independent retailers in how prepared they are to act when a new demand opportunity becomes available.
+
+Before legalization, a potential entrant can prepare a prospective store by choosing a level of preparedness $p_k\in[0,1]$, where $k\in\{I,C\}$ denotes independent and chain entrants. Preparedness captures how far a potential location has progressed toward becoming an operating store. For example, a firm may identify a suitable site, arrange financing, prepare a license application, or develop the store format before recreational sales become legal. These activities can take place before the demand opportunity can be served, but they reduce the time needed to open once legalization occurs. A more prepared project can therefore begin serving consumers sooner and earn revenue before additional firms enter the market.
+
+The cost of reaching a given level of preparedness depends on the firm's stock of reusable organizational capital, denoted by $A_k\geq0$. This capital represents capabilities that a firm can use across locations, such as knowledge of the regulatory process, established relationships with lenders and suppliers, standardized store formats, and experience identifying and preparing new sites. These capabilities are particularly relevant for a chain considering another location because they have already been developed through the operation of other stores. We capture the cost of preparedness with $K(p_k;A_k)$, which satisfies
+\[
+K_p>0,
+\qquad
+K_{pp}>0,
+\qquad
+K_{pA}<0.
+\]
+The first condition means that reaching a higher level of preparedness requires more resources, while the second implies that each additional step toward completion becomes increasingly costly. The third condition captures the role of reusable organizational capital: a firm with more organizational capital faces a lower marginal cost of preparing a new location. We assume
+\[
+A_C>A_I,
+\]
+so that established chains have more reusable organizational capital available for a new location than an independent retailer opening its first store.
+
+The distinction between $A_k$ and $p_k$ is important for the interpretation of the mechanism. $A_k$ is a stock of capabilities that the firm already possesses, whereas $p_k$ is the firm's choice of how much to prepare a particular potential location. Organizational capital therefore affects the cost of preparation rather than directly determining entry. Empirically, the timing of entry provides evidence about the consequences of this difference in preparedness, while $A_k$ itself would require separate measures or proxies for reusable organizational capabilities, such as prior operating experience or the number of existing locations. Without such measures, the reduced-form entry results do not separately identify organizational capital from the preparedness it enables. The model instead uses the distinction to provide an economic explanation for why one organizational form can be ready to enter sooner than another.
+
+Preparedness is valuable because completing more of the project before legalization allows the firm to open sooner once the demand opportunity becomes available. Let $R(p_k)$ denote the expected value of preparedness, with
+\[
+R_p>0.
+\]
+This value reflects the benefit of being able to operate earlier and capture demand before additional entrants arrive. A potential entrant therefore chooses its level of preparedness to solve
+\[
+\max_{p_k\in[0,1]}
+\left\{
+R(p_k)-K(p_k;A_k)
+\right\}.
+\]
+This timing decision is natural in the setting because firms can undertake preparation before recreational sales begin, while the return from that preparation is realized only after the market opens. A firm expecting an attractive entry opportunity can therefore invest before legalization in order to reduce the time between legalization and operation.
+
+\begin{proposition}[Organizational capital and preparedness]
+\label{prop:preparedness}
+If $K_{pA}<0$ and $A_C>A_I$, then equilibrium preparedness satisfies
+\[
+p_C^*>p_I^*.
+\]
+\end{proposition}
+
+The economic intuition is simple. Because organizational capital makes preparation less costly at the margin, a chain with more reusable organizational capabilities has a greater incentive to prepare a prospective location before legalization. It consequently enters the post-legalization market with projects that are, on average, further along toward opening. Independent retailers, with less reusable organizational capital, may need more time to complete the same preparation. The model therefore generates an initial difference in the speed of entry even when the two types face the same long-run demand opportunity and the same profitability once a store is operating.
+
+This mechanism provides a natural interpretation of the timing pattern in Section~\ref{sec:composition}: chains can respond quickly when the market opens because some of the work required for entry can be completed in advance, while independent retailers enter more gradually as they complete their own preparations. As both types have time to respond, the initial difference can diminish without requiring chains to have a permanent advantage in store-level profitability. The mechanism is therefore about the timing of market expansion rather than a lasting difference in operating performance.
+what does the equation 10 imply?
+\subsection{A common regulatory pipeline and convergence}
+\label{sec:diffusion}
+Preparedness by itself does not determine the observed path of entry; what matters is how quickly an unfinished project can be converted into an operating store once legalization occurs. We therefore assume that, after legalization, both organizational types move through the same institutional process for completing an entry project, including licensing review, inspection, and final build-out. Let $\lambda>0$ denote the rate at which this remaining work is completed. The common $\lambda$ reflects the institutional environment rather than a firm-specific advantage, and it determines how quickly the remaining gap between a firm's current and eventual response is closed, while leaving the long-run level of entry unchanged.
+
+Let $\beta_k(t)$ denote the nonlegal-border coefficient for organizational type $k\in\{I,C\}$ at $t$ quarters after legalization, corresponding to the quarter-specific coefficients estimated in Section~\ref{sec:composition}. Under the baseline model, both types have the same long-run response, denoted by $\beta^\infty$, consistent with the empirical finding that their responses become statistically indistinguishable after the initial adjustment period. The difference between the two types therefore comes from where they begin rather than where they end. We capture this initial position with $\phi_k\in[0,1]$, defined as the share of type $k$'s eventual response that is already realized when legalization occurs:
+\[
+\beta_k(0)=\phi_k\beta^\infty.
+\]
+Because greater preparedness allows a firm to convert a project into an operating store sooner, we assume that $\phi_k$ increases with equilibrium preparedness, so that $\phi_k=\phi(p_k^*)$ with $\phi'>0$. Proposition~\ref{prop:preparedness} then implies $\phi_C>\phi_I$: chains begin the post-legalization adjustment with a larger share of their eventual response already in place.
+
+We model the post-legalization adjustment as the closing of the remaining gap between the current response and its long-run level:
+\begin{equation}
+\label{eq:betadot}
+\dot{\beta}_k(t)
+=
+\lambda
+\left[
+\beta^\infty-\beta_k(t)
+\right].
+\end{equation}
+The equation has a simple interpretation. When a type is still far from its eventual response, more entry remains to be completed; as the type approaches its long-run level, less adjustment remains. The parameter $\lambda$ determines how quickly this remaining gap closes. A larger $\lambda$ implies faster adjustment, whereas a smaller $\lambda$ implies a more gradual transition. Because $\lambda$ is common across organizational types, the model attributes differences in their paths to their initial level of preparedness rather than to differences in the speed of the institutional process itself.
+
+Solving equation~\eqref{eq:betadot} subject to $\beta_k(0)=\phi_k\beta^\infty$ gives
+\begin{equation}
+\label{eq:diffusion}
+\beta_k(t)
+=
+\beta^\infty
+\left[
+1-(1-\phi_k)e^{-\lambda t}
+\right],
+\qquad
+k\in\{I,C\}.
+\end{equation}
+The expression describes a gradual movement from the initial level $\phi_k\beta^\infty$ toward the common long-run response $\beta^\infty$. At legalization, the realized response depends on how much preparation has already been completed; over time, the remaining difference is reduced through the common institutional pipeline. Thus, the model separates two distinct margins: $\phi_k$ determines how much of the eventual response is already in place when legalization occurs, while $\lambda$ determines how quickly the remaining response is realized.
+
+\begin{proposition}[Common-pipeline convergence]
+\label{prop:convergence}
+If both organizational types face the same post-legalization completion rate $\lambda$, then
+\[
+\beta_C(t)-\beta_I(t)
+=
+\left[
+\beta_C(0)-\beta_I(0)
+\right]e^{-\lambda t}
+=
+\beta^\infty(\phi_C-\phi_I)e^{-\lambda t},
+\]
+so the difference between their responses declines monotonically toward zero as $t$ increases whenever $\phi_C\neq\phi_I$.
+\end{proposition}
+
+The economic interpretation is that a difference in preparedness can generate an initial difference in entry without implying a permanent difference between the two organizational forms. Combining Proposition~\ref{prop:preparedness}, which implies $\phi_C>\phi_I$, with the common-pipeline assumption yields a clear prediction: chains should have a larger response immediately after legalization because they begin with more prepared projects, but the advantage should shrink as independent retailers complete their own entry projects. Since both types face the same completion rate and the same long-run response, their difference should eventually disappear.
+
+This prediction is stronger than simply stating that the two types converge. It implies that the gap should decline smoothly over time rather than widen, reverse, or settle at a persistent nonzero difference. In economic terms, the model interprets the observed early difference as a head start rather than a permanent advantage: chains reach the market sooner because they are better prepared when the opportunity opens, while independent retailers gradually close the gap as the common post-legalization process allows more projects to become operational. The model therefore provides a direct link between the preparedness mechanism and the dynamic composition of entry documented in Section~\ref{sec:composition}.
+
+The common-pipeline assumption also has a clear empirical interpretation. The model does not require chains and independents to differ in the speed at which the regulatory process itself operates; instead, it predicts that the same institutional process acts on different initial levels of preparedness. We estimate the dynamic coefficients $\hat{\beta}_{k,q}$ from the quarter-specific composition regressions and then fit equation~\eqref{eq:diffusion} to these estimates using weighted nonlinear least squares, with each quarter weighted by the precision of its estimated coefficient. We first allow the completion rate to differ across organizational types and then estimate the restricted specification with a common $\lambda$. The estimated common rate provides a direct measure of the speed at which the initial organizational difference is worked off, while $\phi_I$ and $\phi_C$ capture the relative head start of the two types at legalization.
+
+\paragraph{Estimates.}
+
+The model makes a sharp distinction between two features of the entry process: how much of the eventual response is already in place when legalization occurs, and how quickly the remaining response is completed afterward. We take this distinction to the data in two steps. First, we estimate the dynamic composition specification underlying Table~\ref{tab:fact3} and Figure~\ref{fig:fact3dynamic}, obtaining a separate nonlegal-versus-always-legal-border coefficient $\hat{\beta}_{\tau,q}$ for each organizational type $\tau\in\{I,C\}$ and each quarter $q$. Specifically, for each quarter and organizational type, we estimate
+\begin{equation}
+\label{eq:firststage_diffusion}
+\operatorname{asinh}(N^\tau_{z,q})
+=
+\alpha_{\tau,q}
++
+\beta_{\tau,q}\text{Nonlegal}_z
++
+\gamma_{\tau,q}\log(\text{Population}_z)
++
+\varepsilon_{\tau,z,q}.
+\end{equation}
+These 34 coefficients, rather than the underlying ZIP-code observations themselves, are then used to estimate the parameters of equation~\eqref{eq:diffusion}. We fit the model jointly to the 17 quarterly coefficients for each organizational type using weighted nonlinear least squares, with weights equal to the inverse of the estimated variance of each $\hat{\beta}_{\tau,q}$. Thus, more precisely estimated quarterly coefficients receive greater weight in determining the fitted transition path.
+
+All four parameters in equation~\eqref{eq:diffusion} are estimated jointly. The common parameters $\beta^\infty$ and $\lambda$ determine the long-run destination and the speed of adjustment for both organizational types, while $\phi_I$ and $\phi_C$ determine where the two types begin relative to that common destination. The resulting estimates are
+\[
+\hat{\beta}^{\infty}=0.363
+\qquad\text{and}\qquad
+\hat{\lambda}=0.408,
+\]
+with standard errors of $0.018$ and $0.148$, respectively. The estimated adjustment rate corresponds to a half-life of approximately 1.7 quarters, meaning that, at any point in the transition, roughly half of the remaining gap between a type's current response and its long-run response is closed over the next 1.7 quarters. The estimate therefore provides a quantitative measure of how quickly the post-legalization entry process moves toward its long-run level.
+
+The more striking difference lies in the initial conditions. The estimated readiness share is $\hat{\phi}_C=0.57$ for chains, compared with only $\hat{\phi}_I=0.09$ for independent retailers. In the model, these estimates have a direct economic interpretation: chains begin the post-legalization adjustment with about 57 percent of their eventual response already in place, whereas independents begin with only about 9 percent. The difference is therefore not captured by a faster common adjustment process. Instead, it appears at the starting point, consistent with the preparedness mechanism in which established operators can use organizational capabilities accumulated from previous locations to prepare new projects before the market opens.
+
+The common adjustment rate is itself a meaningful implication of the model. The institutional pipeline is operated by the regulator rather than by the firms, so the model does not give chains a separate advantage in the speed at which an application moves through licensing, inspection, and final approval. To assess this implication, we also estimate an unrestricted version of the diffusion model that allows $\lambda_I$ and $\lambda_C$ to differ. Allowing separate adjustment rates produces virtually no improvement in fit: the weighted sum of squared residuals increases only from $2.514$ in the unrestricted specification to $2.517$ when a common rate is imposed, with 29 degrees of freedom in the restricted comparison. Thus, the data provide little evidence that the two organizational types require different adjustment speeds once they enter the same institutional pipeline. This supports the interpretation that the main difference between chains and independents lies in their initial readiness rather than in their ability to move through the post-legalization process.
+
+Taken together, the estimates give a simple interpretation of the dynamic composition results. Chains do not need a permanently stronger response to captive cross-border demand to account for their early lead. They begin the transition substantially closer to their eventual level, while both organizational types subsequently move toward the same long-run response at approximately the same rate. In this sense, the model turns the reduced-form pattern in Figure~\ref{fig:fact3dynamic} into a more specific economic statement: the early advantage of chains reflects a larger head start at legalization, rather than a persistent difference in the destination or speed of entry.
+
+Figure~\ref{fig:diffusionfit} illustrates this interpretation by plotting the 34 estimated quarterly coefficients together with the fitted curves from equation~\eqref{eq:diffusion}. The vertical axis is the estimated nonlegal-versus-always-legal-border coefficient $\hat{\beta}_{\tau,q}$. The two fitted curves share the same long-run level and adjustment rate but begin from different initial conditions, making the economic content of the model visible directly in the data. Table~\ref{tab:diffusionfit} reports the corresponding parameter estimates and standard errors.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_fact3_diffusion_fit.png}
+\caption{Common-speed, different-readiness diffusion model. The figure plots the quarter-specific nonlegal-versus-always-legal-border coefficients $\hat{\beta}_{\tau,q}$ from the dynamic composition regressions together with the fitted curves from equation~\eqref{eq:diffusion}. The curves share a common long-run response and adjustment rate but allow organizational types to differ in their initial readiness. Points are estimated coefficients with 95\% confidence intervals.}
+\label{fig:diffusionfit}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\input{tab_fact3_diffusion_fit.tex}
+\caption{Fitted parameters of the common-pipeline diffusion model in equation~\eqref{eq:diffusion}. The parameters are estimated by weighted nonlinear least squares using the quarter-specific coefficients from the dynamic composition regressions, with weights equal to the inverse estimated variance of each coefficient. Standard errors are reported in parentheses.}
+\label{tab:diffusionfit}
+\end{table}
+
+This exercise should be interpreted as a quantitative test of the transition mechanism rather than as a structural re-estimation of the underlying entry game. The first-stage regressions provide the quarterly reduced-form responses, while the nonlinear fit asks whether those responses can be summarized by the preparedness model's central prediction: different initial readiness, a common institutional adjustment rate, and a common long-run destination. This approach keeps the link between the theory and the empirical evidence transparent while avoiding additional assumptions about firms' dynamic beliefs and strategic decisions during the transition.
+
+
+\color{red} This should be briefly included in the explanation
+\subsection{Regulatory amplification and the preparedness gap}
+\label{sec:amplification}
+
+The preparedness model also makes a testable claim about \emph{how much} chains and independents should differ, as a function of the pipeline's own speed. If the value of preparedness comes from avoiding delay, and a slower pipeline means more delay to avoid, then a slower common institutional clock should raise the return to being prepared -- and raise it more for the type whose capital makes preparedness cheap.
+
+This does not follow from $K_{pA}<0$ alone: differentiating the first-order condition $R_p(p_k;\lambda)=K_p(p_k;A_k)$ shows that the sign of $\partial(p_C^*-p_I^*)/\partial\lambda$ depends on how the curvature of $K$ varies with $A$, a restriction the three primitives above do not pin down. It holds cleanly, however, under a standard, transparent functional form. Let preparedness cost be quadratic in organizational capital, $K(p;A)=p^2/(2A)$ -- so $K_p=p/A$, $K_{pp}=1/A>0$, $K_{pA}=-p/A^2<0$, matching the assumptions above -- and let the value of preparedness be linear in the delay it avoids, $R(p;\lambda)=V-c(1-p)/\lambda$ for constants $V,c>0$, capturing an expected wait of $(1-p)/\lambda$ periods for the unprepared share of the project to clear a pipeline moving at rate $\lambda$, with rents eroding linearly over that wait. The first-order condition $c/\lambda = p_k^*/A_k$ solves explicitly to
+\[
+p_k^*(A_k,\lambda) = \frac{cA_k}{\lambda}, \qquad\text{so}\qquad p_C^*-p_I^* = \frac{c(A_C-A_I)}{\lambda}.
+\]
+
+\begin{proposition}[Regulatory amplification]
+\label{prop:amplification}
+Under the functional forms $K(p;A)=p^2/(2A)$ and $R(p;\lambda)=V-c(1-p)/\lambda$,
+\[
+\frac{\partial(p_C^*-p_I^*)}{\partial\lambda} = -\frac{c(A_C-A_I)}{\lambda^2} < 0.
+\]
+A slower common pipeline (smaller $\lambda$) strictly widens the equilibrium preparedness gap between high- and low-capital types.
+\end{proposition}
+
+The economic content survives well beyond this specific pair of functional forms -- it requires only that the spread in the inverse marginal-cost mapping $K_p^{-1}(\cdot;A)$ across types widen as the stakes of preparedness ($R_p$) rise, a restriction on the curvature of $K$ in $A$ that the quadratic case satisfies exactly and that is not an automatic consequence of $K_{pA}<0$ alone. The paper does not push this further than the qualitative point it is meant to establish: \textbf{even a regulatory process that is formally identical for every applicant can produce very different transitional outcomes for firms that arrive at it with different amounts of preparation already done}, and that difference should be more pronounced precisely where the common pipeline is slowest. This connects the preparedness mechanism to a broader literature on preemption and timing in the adoption of new opportunities \citep{FudenbergTirole1985,Dixit1989}, and to work on how organizational capital built from repeated market entry shapes a chain's ability to act quickly in a new one \citep{PrescottVisscher1980,Jia2008}.
+
+\color{black}
+\subsection{Competition, saturation, and market age}
+\label{sec:saturation}
+
+The dynamic results raise a further question about why the difference between chains and independent retailers narrows after legalization. Two forces can shape entry at the same time, and separating them is important for interpreting the evidence. As more stores enter a market, competition can make an additional entry less attractive because potential entrants face more existing rivals. At the same time, firms that were not fully prepared when legalization occurred may continue completing the work required to open, causing entry to occur gradually even if competitive conditions are becoming less favorable. The decline in independent entry over the life of a market could therefore reflect either increasing competitive pressure or the natural exhaustion of the initial pool of entry opportunities, while the faster early response of chains could reflect their greater preparedness rather than weaker competition.
+
+Market age captures a general feature of entry: new entry may decline as a market matures and the most attractive entry opportunities are gradually taken. This pattern alone, however, does not tell us whether independent retailers are catching up with chains. To distinguish these forces, we ask whether the entry gap between nonlegal-border and always-legal-border markets changes with market age. A negative interaction between market age and nonlegal-border status for independent entry means that the initial entry advantage in nonlegal-border markets becomes smaller as the market matures, which is the pattern predicted by the preparedness mechanism.
+
+We examine this distinction using Poisson hazard regressions for the number of newly entering independent and chain brands in each ZIP-quarter. For organizational type $\tau\in\{I,C\}$, the baseline specification is
+\begin{equation}
+\label{eq:hazard}
+\begin{aligned}
+\mathbb{E}\!\left[
+N^{\mathrm{new},\tau}_{zt}\mid X_{zt}
+\right]
+&=
+\exp\Bigg\{
+\alpha_\tau
++ \beta_\tau \mathrm{Age}_{zt}
++ \gamma_\tau N^{\tau}_{z,t-1} \\
+&\qquad
++ \eta_\tau N^{-\tau}_{z,t-1}
++ \psi_\tau \mathrm{Density}_{z,t-1}
++ \delta_\tau \mathrm{Nonlegal}_z \\
+&\qquad
++ \theta_\tau \log(\mathrm{Population}_z)
++ \lambda_t
+\Bigg\}.
+\end{aligned}
+\end{equation}
+where $N^{\mathrm{new},\tau}_{zt}$ is the number of new entrants of type $\tau$ in ZIP code $z$ during quarter $t$, and $\mathrm{Age}_{zt}$ measures the number of quarters since the ZIP code's first active dispensary. $N^{\tau}_{z,t-1}$ and $N^{-\tau}_{z,t-1}$ are the lagged numbers of own-type and other-type dispensaries, respectively, while $\mathrm{Density}_{z,t-1}$ is lagged dispensary density relative to the resident population. $\mathrm{Nonlegal}_z$ identifies ZIP codes located near a nonlegal-state border, and $\log(\mathrm{Population}_z)$ captures the size of the local resident market. The Poisson specification is useful here because the dependent variable is a count of new entrants and can take the value zero in a ZIP-quarter.
+
+The coefficients in equation~\eqref{eq:hazard} describe proportional changes in the expected number of new entrants. For a continuous variable such as market age, a coefficient of $\beta_\tau$ implies that a one-unit increase in market age changes the expected entry count by approximately $100\times\beta_\tau$ percent when the coefficient is small, or exactly by $100\times(e^{\beta_\tau}-1)$ percent more generally. The same interpretation applies to the coefficients on the lagged stock variables and the other covariates. A negative coefficient on a lagged competitor stock would be consistent with the entry-threshold mechanism: more existing competitors would reduce the incentive for another firm to enter. 
+
+The results in Table~\ref{tab:test2hazard} also illustrate why these variables should be interpreted carefully. New entry is lower in older markets for both independent and chain retailers, which shows that entry is concentrated earlier in the life of a market. This decline, however, can arise simply because the most attractive opportunities are taken first, so it does not by itself tell us whether independent retailers are catching up with chains or whether competition is discouraging further entry. The coefficient on lagged store density presents a similar issue. Although density is intended to capture the number of competing stores already operating in the market, its positive coefficient for both organizational types suggests that it also captures differences in market attractiveness: areas that already support more stores may simply have stronger demand or other favorable characteristics that encourage further entry. For this reason, we use these hazard estimates to study the timing of entry rather than to recover the structural competitive effects in the entry game.
+
+The more informative test adds an interaction between market age and nonlegal-border status:
+\begin{equation}
+\label{eq:hazard_interaction}
+\begin{aligned}
+\mathbb{E}\!\left[
+N^{\mathrm{new},\tau}_{zt}\mid X_{zt}
+\right]
+&=
+\exp\Bigg\{
+\alpha_\tau
++ \beta_\tau \mathrm{Age}_{zt}
++ \delta_\tau \mathrm{Nonlegal}_z
++ \phi_\tau
+\left(
+\mathrm{Age}_{zt}\times\mathrm{Nonlegal}_z
+\right) \\
+&\qquad
++ \gamma_\tau N^{\tau}_{z,t-1}
++ \eta_\tau N^{-\tau}_{z,t-1}
++ \psi_\tau \mathrm{Density}_{z,t-1} \\
+&\qquad
++ \theta_\tau \log(\mathrm{Population}_z)
++ \lambda_t
+\Bigg\}.
+\end{aligned}
+\end{equation}
+
+The interaction term provides the more direct test of the preparedness mechanism by asking whether the nonlegal-border entry advantage changes as markets mature. For independent retailers, a negative coefficient means that this advantage is larger in younger markets and declines with market age, consistent with independent firms gradually completing the preparation required to enter after legalization. The estimates support this prediction: the interaction is $-0.050$ ($p=0.056$), indicating that the nonlegal-border advantage in independent entry becomes smaller as markets age.
+
+For chains, the interaction is positive, at $0.059$ ($p=0.021$), reflecting a different adjustment path. Because chains begin the post-legalization period with a larger share of their eventual response already in place, the model does not predict the same catch-up pattern for chains. Taken together, these results distinguish the general decline in entry as markets mature from the border-specific adjustment predicted by the model: while entry flows tend to decline with market age, the nonlegal-border advantage in independent entry also narrows as markets mature. 
+
+\subsection{A settled-state entry-threshold model: a secondary, distinct estimand}
+\label{sec:settledgame}
+
+The preceding sections give the paper's primary account of Section~\ref{sec:composition}'s central finding -- a transition-path asymmetry that closes within about a year. This section asks a different, narrower question: once a market has had enough time to settle that the transition described above is complete, do independent and chain potential entrants' \emph{steady-state} profitability still respond at different rates to cross-border demand? The two questions use different samples (calendar time since legalization versus quarters since each ZIP code's own first dispensary) and different objects (a reduced-form coefficient gap versus a structural equilibrium parameter), and the paper does not treat agreement or disagreement between them as evidence about either result's validity on its own terms.
+\color{red}
+\subsubsection{Own-network internalization: why \texorpdfstring{$\delta_I$}{delta	extunderscore I} may exceed \texorpdfstring{$\delta_C$}{delta	extunderscore C}}
+\label{sec:cannibalization}
+
+The specification above lets $\delta_I$ and $\delta_C$ differ freely, and Table~\ref{tab:fact3} and Section~\ref{sec:modelfit} show the data want them to. Left there, that inequality is only a fitted fact -- consistent with many stories, including one in which chains simply have a flatter demand response for reasons unrelated to their own network. This subsection derives $\delta_I \neq \delta_C$ from a primitive that does not, by construction, presuppose the answer, adapting the network-cannibalization logic of \citet{Nishida2008} and \citet{Holmes2011} to a market with two competing organizational types rather than one chain's own expansion problem.
+
+The two organizational types face the same primitive cross-border-demand expansion: a more exposed location draws more gross revenue, whatever type opens it. They differ in how much of that gross revenue is incremental to the firm. A first-location independent entrant has no other New Mexico outlet, so every dollar the new store draws is a dollar of new firm-wide revenue. An established multi-store operator opening an additional outlet may instead partly relocate demand from its own nearby stores: a customer who would have driven to the operator's existing location now visits the new one instead, so part of the new store's revenue is a transfer within the firm rather than a firm-wide increase. This is captured with a predetermined network-overlap state, $H_{jzt}\ge 0$, observed and computed only from operator $j$'s storefronts already active in the quarter before $t$, never from stores that open later.
+
+Let $D(B_z)\equiv\log(1+B_z)$ and let $\delta>0$ denote the common, primitive gross-profitability effect of cross-border demand on a marginal storefront, before any own-network offset. The $k$-th independent potential entrant's profit is unchanged from equation~\eqref{eq:piI}, since its own-network overlap is zero by construction. An established operator $j$'s marginal outlet in ZIP code $z$ at $t$ has profit
+\begin{equation}
+\pi^C_{jzt} \;=\; \kappa_C + \beta_C\log L_{zt} + \big[\delta - \rho H_{jzt}\big]D(B_z) - \text{competition} + \varepsilon^C_{jzt}, \label{eq:piC_micro}
+\end{equation}
+where $\rho\ge 0$ is the strength of internalized own-network cannibalization. Differentiating,
+\[
+\frac{\partial \pi^I_{zt}}{\partial D(B_z)} = \delta, \qquad \frac{\partial \pi^C_{jzt}}{\partial D(B_z)} = \delta - \rho H_{jzt}, \qquad \Longrightarrow \qquad \frac{\partial \pi^I_{zt}}{\partial D(B_z)} - \frac{\partial \pi^C_{jzt}}{\partial D(B_z)} = \rho H_{jzt} \;\ge\; 0,
+\]
+strictly positive whenever $\rho>0$ and $H_{jzt}>0$.
+
+\begin{proposition}[Organizational heterogeneity from own-network internalization]
+\label{prop:cannibalization}
+Suppose an established multi-store operator internalizes the effect of a new outlet on its own pre-existing network ($\rho>0$), and the candidate market overlaps that network ($H_{jzt}>0$). Then the marginal profitability response to cross-border demand of a first-location independent entrant is at least as large as that of the established operator's marginal outlet, and strictly larger whenever $H_{jzt}>0$:
+\[
+\frac{\partial \pi^I_{zt}}{\partial D(B_z)} \;\ge\; \frac{\partial \pi^C_{jzt}}{\partial D(B_z)}, \qquad \text{with equality iff } \rho H_{jzt}=0.
+\]
+\end{proposition}
+\begin{proof}
+Immediate from the two derivatives above: their difference is $\rho H_{jzt}$, non-negative by $\rho\ge0, H_{jzt}\ge0$, and strictly positive iff both are strictly positive.
+\end{proof}
+
+This is a statement about the marginal network profit of an additional outlet, not a claim that independent firms are more productive, better-run, or more profitable than chains on average -- the model is silent on, and does not need, any such claim. Mapped to the reduced-form parameters of Section~\ref{sec:environment}: $\delta_I=\delta$ is the independent pool's response, since no operator has a positive $H$ before its first store, while $\delta_C$ is what a market-level model that does not carry an operator index recovers as an average of $\delta-\rho H_{jzt}$ across established operators actually expanding. Section~\ref{sec:counterfactuals} constructs $H_{jzt}$ from this project's own storefront coordinates and tests Proposition~\ref{prop:cannibalization}'s prediction directly at the operator level, rather than treating the aggregate $\hat\delta_I>\hat\delta_C$ finding as proof of a mechanism that could equally be consistent with other, unmodeled sources of type-specific demand response.
+
+\color{black}
+
+\subsection{Long-run equilibrium and composition}
+\label{sec:equilibrium}
+
+To characterize the long-run composition of entry, the model allows potential entrants to differ in their unobserved profitability through private shocks. We assume that $\varepsilon^I_{k,zt}$ and $\varepsilon^C_{k,zt}$ are i.i.d.\ standard logistic across potential entrants, organizational types, markets, and periods, following the discrete-choice entry literature \citep{Seim2006,TrainDCM}. This normalization fixes the scale of the payoff coefficients, so they are identified relative to the scale of unobserved firm-specific profitability shocks. A potential entrant enters whenever its realized profit is positive, which implies an entry probability $\Lambda(\pi^\tau_{zt}(k))$, where $\Lambda(\cdot)$ is the logistic cumulative distribution function.
+
+Following \citet{BresnahanReiss1991} and \citet{Mazzeo2002}, potential entrants within each organizational type are indexed by $k=1,\ldots,\bar K$. The index $k$ represents the position of a potential entrant in the entry threshold rather than a literal order of arrival: as more firms of the same type enter, the profitability of the next potential entrant falls. Summing the entry probabilities across potential entrants therefore gives the expected number of entrants of each type:
+\begin{equation}
+\label{eq:bestresponses}
+R_I(N^C_{zt})
+=
+\sum_{k=1}^{\bar K}
+\Lambda\!\left(\pi^I_{zt}(k)\right),
+\qquad
+R_C(N^I_{zt})
+=
+\sum_{k=1}^{\bar K}
+\Lambda\!\left(\pi^C_{zt}(k)\right).
+\end{equation}
+The upper bound $\bar K$ is chosen sufficiently large for computation and has no direct economic interpretation.
+
+Because each type's entry decision depends on the expected entry of the other type, equilibrium requires both best responses to hold simultaneously. A Bayesian--Nash equilibrium is therefore a pair $(N^{I*}_{zt},N^{C*}_{zt})$ satisfying
+\begin{equation}
+\label{eq:bne}
+N^{I*}_{zt}=R_I(N^{C*}_{zt}),
+\qquad
+N^{C*}_{zt}=R_C(N^{I*}_{zt}).
+\end{equation}
+In other words, the equilibrium is the fixed point at which the expected number of independent and chain entrants is consistent with the entry incentives of both types. We obtain this fixed point numerically using the procedure described in Appendix~\ref{app:computation}.
+
+The long-run composition of entry is governed by two sets of parameters. The demand coefficients $\delta_I$ and $\delta_C$ determine how strongly captive cross-border demand raises the profitability of independent and chain entry, respectively. Thus, $\delta_I>\delta_C$ means that the same increase in captive demand creates a larger incremental profit opportunity for an independent than for a chain. One possible explanation is network cannibalization: an independent opening its first store gains access to the additional demand without affecting sales at other locations, whereas a chain adding a store may partly shift sales from its existing network.
+
+The parameter $\gamma_{\text{other}}$ captures the interaction between the two organizational forms. A positive value means that entry by one type reduces the profitability of the other, consistent with business stealing, whereas a negative value indicates a positive cross-type association. Such an association could arise because the two types offer differentiated products and jointly attract consumers, or because the entry of an established chain provides information about the attractiveness of a market to less-informed potential entrants \citep{CaplinLeahy1998,ToivanenWaterson2005}. The estimated $\gamma_{\text{other}}$ is negative, which is consistent with these mechanisms, but the coefficient should not be interpreted as evidence that chain entry causally induces independent entry. It may also capture unobserved market characteristics that make both types more likely to enter the same locations.
+
+The long-run estimates indicate that independent entry responds more strongly to captive cross-border demand than chain entry. This result concerns the profitability of entry after firms have had time to adjust and is therefore distinct from the transition pattern documented earlier. Chains respond more quickly immediately after legalization because they begin with greater preparedness, while independent retailers take longer to enter. As independent firms complete their preparation, their entry response catches up with that of chains, so the difference between the two types becomes statistically indistinguishable from zero in later periods. The long-run estimates then indicate that, once this initial adjustment is complete, captive demand creates a stronger incremental entry response for independent retailers.
+
+The model therefore separates two margins that can otherwise appear contradictory. Chains have an advantage in the timing of entry because they are better prepared when the opportunity first becomes available, whereas independent retailers have the stronger long-run response to captive demand. The fact that the two types become statistically indistinguishable during the transition does not imply that their underlying long-run incentives are identical; rather, it reflects the convergence of their entry paths toward the long-run equilibrium.
+
+% =====================================================================
+% Revised later sections -- updated_draft_with_IO
+% Generated 2026-10-10. NOT applied to updated_draft_with_IO.tex or Overleaf.
+% Replaces: Identification and Estimation, Model Fit and Validation,
+% Counterfactuals and the Own-Network Mechanism, Robustness,
+% Discussion: Colorado and Constrained Entry, Conclusion.
+%
+% Before pasting, see the flags given in the chat. In short:
+%  - Own-network test uses the NEWER local results (tab_mechreg_dynamic.tex),
+%    not the older pasted numbers (-0.014 / +0.022).
+%  - gamma_other < 0 contradicts line ~535 ("gamma >= 0, strategic
+%    substitutes"), line ~473, and Proposition 2's sufficient condition.
+%  - Colorado revenue-per-store interaction is POSITIVE (+0.465), not negative.
+%  - Legalization counterfactual counts store-quarters (252 town-quarters).
+%  - tex_zipstructural_blurb.tex input is commented out and replaced by prose.
+%  - tab:fact3nonlegpop (mechanically invariant check) and the Albuquerque
+%    robustness mention were removed; tab:fact3abq is now uncited.
+%  - Add the CaplinLeahy1998 bib entry (at the end of this file) to bibliography.bib.
+% =====================================================================
+\section{Identification and Estimation}
+\label{sec:identification}
+
+\subsection{Sample and unit of analysis}
+
+We introduce an entry game that its stationary Bayesian--Nash equilibrium represents the long-run distribution of retailers. The game is designed in which given population, captive demand, and the competitive environment, the expected numbers of independent and chain stores are stable and each type's entry decision is optimal given the presence of the other type. This equilibrium therefore describes where the market settles rather than how it gets there. We estimate the game using ZIP-code-quarter observations at least eight quarters after the first active dispensary. 
+
+The game is also estimated at the town level, where the same storefront data are aggregated to town-quarter observations under an analogous environment. This provides a check on whether the structural results depend on the geographic definition of the market. While ZIP codes provide the main unit of analysis, towns are more closely aligned with the local areas in which retailers compete, making the town-level estimates a useful robustness check.
+
+\subsection{Which variation identifies each parameter}
+
+In the empirical part, we introduced the parameters of entry decisions. The parameter $\beta_\tau$ captures how entry by type $\tau$ responds to local population, while $\delta_\tau$ captures how entry responds to the additional population located across a nonlegal state border, holding local population fixed. Thus, $\delta_I$ and $\delta_C$ measure how strongly independent and chain entry respond to the same external demand opportunity.
+
+Once the cross border demand is realized by the retailers, $\kappa_\tau$ determines the overall level of entry for each organizational type. It captures profitability net of entry costs; without a cost shifter that varies within type, the two components cannot be separately identified. The competitive parameters (entry costs determinants) are identified from how entry changes as the number of firms in the market changes. The parameter $\gamma_{\text{same}}$ captures the effect of additional firms of the same organizational type, while $\gamma_{\text{other}}$ captures how the presence of firms of the other type affects entry profitability. Since entry by the two organizational types responds to common market-level demand conditions, their observed entry counts are closely related, making it impossible to identify four separate type-pair competitive effects with precision. We therefore use the parsimonious same-type/other-type specification described in Section~\ref{sec:environment}, while estimating the unrestricted specification as a diagnostic for the robustness of this restriction.
+
+\subsection{Estimator}
+
+For any candidate parameter vector, the model generates an equilibrium number of independent and chain entrants for each market. The Bayesian--Nash equilibrium makes these predictions mutually consistent: the predicted number of independent entrants depends on the expected number of chains, while chain entry depends on the expected number of independents. The estimator chooses the structural parameters so that these equilibrium predictions match the observed entry counts as closely as possible using simulated minimum distance, following the procedure described in Appendix~\ref{app:computation}.
+
+The optimization is repeated from several starting values to ensure that the estimates are not driven by a particular numerical starting point. Standard errors are obtained from a market-level bootstrap, with the market defined as the ZIP code for the ZIP-code estimates and as the town for the town-level estimates.
+
+\section{Model Fit and Validation}
+\label{sec:modelfit}
+
+The structural estimates ask whether the entry game can reproduce the observed variation in independent and chain entry across settled markets and, in particular, whether it recovers the stronger settled-state response of independent retailers to captive demand. Table~\ref{tab:zipstructural} reports the ZIP-code estimates. Captive demand raises the profitability of independent entry substantially more than that of chain entry, with $\hat\delta_I=0.047$ compared with $\hat\delta_C=0.002$. The estimated difference, $\hat\delta_I-\hat\delta_C=0.046$, therefore indicates that once markets have settled, the additional demand opportunity generates a much stronger entry incentive for independent retailers.
+
+This result concerns the settled response to demand and is distinct from the transition pattern documented in Section~\ref{sec:composition}. Chains respond first because they enter legalization with more prepared projects, while independent retailers catch up as those projects move through the common institutional pipeline. Once the initial adjustment has passed, however, the estimated demand response is stronger for independent entry. The evidence therefore points to two different dimensions of organizational behavior: chains are better positioned to act quickly when a new opportunity opens, whereas independent firms have the stronger response once the market has settled.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\input{tab_zipstructural_theta.tex}
+\caption{Estimated restricted entry game, ZIP-code level, converged quarters. $\hat\delta_I$ and $\hat\delta_C$ are the type-specific profitability responses to captive cross-border demand in settled markets; $\gamma_{\text{same}}$ and $\gamma_{\text{other}}$ are the same-type and other-type competitive effects. Standard errors and 95\% intervals from ZIP-code-clustered bootstrap replications.}
+\label{tab:zipstructural}
+\end{table}
+
+Figure~\ref{fig:zipstructuralfit} provides a complementary check on the structural estimates by comparing observed and predicted store counts across markets. The model reproduces much of the cross-market variation in total and independent entry and also captures a substantial share of the variation in chain entry. This provides a stronger validation of the model than matching the average number of stores alone, because the estimated parameters generate predictions that broadly track which markets support more or fewer stores of each type.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\linewidth]{fig_zipstructural_fit.png}
+\caption{ZIP-code entry-game fit: observed versus model-predicted store counts, converged-quarter ZIP-code means.}
+\label{fig:zipstructuralfit}
+\end{figure}
+
+The town-level estimates lead to the same qualitative conclusion. Independent entry remains more responsive to captive demand than chain entry, with $\hat\delta_I=0.052$ and $\hat\delta_C=0.009$, while the model also tracks the observed variation in town-level entry closely. The town-level equilibrium converges to the same fixed point across starting values, whereas the ZIP-code model can admit more than one fixed point. We therefore use the town-level estimates for the counterfactual analysis, where the equilibrium is uniquely determined.
+
+\FloatBarrier
+
+\section{Counterfactuals and the Own-Network Mechanism}
+\label{sec:counterfactuals}
+
+\subsection{Legalization counterfactual}
+\label{sec:legalization_cf}
+
+The estimated model can be used to ask how much entry is sustained by captive cross-border demand and which organizational form accounts for that response. We consider a counterfactual in which neighboring nonlegal states legalize recreational cannabis, eliminating the captive-demand component while leaving local population unchanged. For exposed markets, we set $B_{mt}$ to zero and re-solve the Bayesian--Nash equilibrium.
+
+The counterfactual implies a substantial reduction in store entry, with independent retailers accounting for about 82 percent of the stores lost. The result therefore attributes most of the entry sustained by captive demand to independent firms. This reflects both their larger settled-state response to captive demand and their greater representation among the stores serving these markets.
+
+\subsection{Testing the own-network mechanism directly}
+\label{sec:mechreg}
+
+The stronger settled-state response of independent retailers could arise if chains face a cost that independent firms do not: opening another store may divert customers from the chain's existing network. If this own-network effect is important, the response of chain entry to captive demand should become weaker when an operator already has stores close to the candidate market.
+
+We measure own-network overlap using the locations of each operator's existing stores. $H^{\text{same}}_{jzt}$ counts the operator's stores in the candidate ZIP code, while $H^{\text{geo}}_{jzt}(\lambda)$ places greater weight on nearby stores and progressively less weight on stores farther away. We then estimate the expected number of new chain entries for operators that do not yet have a store in the candidate ZIP code using Poisson pseudo-maximum likelihood with operator and quarter fixed effects:
+\begin{equation*}
+\begin{aligned}
+E[\text{EntryC}_{jzt}\mid\cdot]
+=
+\exp\Big\{&
+\alpha_j+\alpha_t+\beta\log L_{zt}
++\delta_B D(B_z)
++\theta H^{\text{geo}}_{jzt}\\
+&+\varphi_{\text{early}}
+\left(H^{\text{geo}}_{jzt}\times D(B_z)\right)
+\mathbb{1}[\text{age}\le3]\\
+&+\varphi_{\text{late}}
+\left(H^{\text{geo}}_{jzt}\times D(B_z)\right)
+\mathbb{1}[\text{age}\ge4]
+\Big\}.
+\end{aligned}
+\end{equation*}
+%\color{red} exp what are the variables in this specification\color{black}
+The interaction terms provide the direct test of the mechanism. A negative coefficient would mean that an operator with greater existing network overlap responds less strongly to captive demand, as the own-network mechanism predicts. A coefficient close to zero would indicate little evidence that existing network overlap changes the response, while a positive coefficient would point in the opposite direction.
+
+The estimates in Table~\ref{tab:mechregdynamic} are negative in both the early and later periods, which is the direction predicted by the mechanism, but neither estimate is statistically distinguishable from zero. The data therefore do not provide sufficiently precise evidence that own-network cannibalization explains the stronger settled response of independent retailers. 
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\input{tab_mechreg_dynamic.tex}
+\caption{Own-network overlap and the chain entry response to captive demand. The interaction $\varphi$ measures whether the response of chain entry to captive demand varies with the operator's existing network, separately for early and later market periods. Estimates use Poisson pseudo-maximum likelihood with operator and quarter fixed effects. Standard errors are clustered by operator.}
+\label{tab:mechregdynamic}
+\end{table}
+\newpage
+\subsection{Interpreting the composition result}
+\label{sec:mechanism-conclusion}
+
+The settled-state result and the own-network mechanism therefore provide different pieces of evidence. The structural estimates show that independent entry responds more strongly to captive demand once markets have settled, while the direct operator-level test does not establish that this difference is caused by own-network cannibalization. 
+
+The estimated competitive effects provide another perspective on the relationship between the two organizational forms. A positive $\hat\gamma_{\text{same}}$ means that additional firms of the same type reduce the profitability of further entry, as expected from competitive crowding. The estimated $\hat\gamma_{\text{other}}<0$, by contrast, indicates a positive cross-type association: conditional on the model's demand variables, markets with more firms of one type tend to have higher estimated entry profitability for the other type. Product differentiation and retail clustering could generate such a relationship, while entry by one type could also reveal information about market attractiveness to potential entrants of the other type \citep{CaplinLeahy1998,ToivanenWaterson2005}. At the same time, the coefficient may capture unobserved characteristics that attract both types. We therefore do not interpret the negative estimate as evidence that entry by one type causally induces entry by the other.
+
+\FloatBarrier
+
+\section{Robustness: needs revision}
+\label{sec:falsification}
+
+The main comparison between nonlegal-border and always-legal-border ZIP codes already holds proximity to a state line fixed, reducing the concern that the results simply reflect general characteristics of border locations. The remaining robustness exercises ask whether the findings depend on the sample, market definition, exposure threshold, or broader commercial activity.
+
+
+\textbf{Distance thresholds and exposure.} The baseline measure defines exposure using a 75-mile distance threshold. Re-estimating the main specifications with 50- and 100-mile thresholds produces broadly similar results, reducing concern that the findings are an artifact of the particular cutoff. The results also vary with the intensity of exposure: markets closer to the relevant nonlegal-state border and markets facing a larger nearby population generate stronger responses. This spatial gradient supports the interpretation that the estimates capture captive demand rather than a generic border effect.
+
+\textbf{Non-cannabis placebo sectors.} A further concern is that nonlegal-border locations may simply be unusually active commercial areas. If that explanation drove the cannabis results, similar changes should appear in unrelated sectors around the legalization date. The placebo estimates for alcohol and grocery activity show no comparable response, making a general increase in commercial activity a less plausible explanation for the main findings.
+
+\FloatBarrier
+
+\section{Discussion: Colorado and Constrained Entry}
+\label{sec:discussion}
+
+The New Mexico evidence shows that captive demand is absorbed primarily through additional entry when firms are relatively free to enter. The Colorado comparison asks whether the way this demand is absorbed changes when entry is more constrained.
+
+The evidence is consistent with that prediction. The border premium in dispensary density is smaller in Colorado than in New Mexico, while the revenue-per-store response points toward a larger intensive-margin response. In other words, where restrictions limit the number of additional stores that can enter, more of the available demand appears to be absorbed by retailers that are already operating.
+
+The implied magnitude is economically meaningful. Applying the estimated difference in density responses to Colorado border-county revenue produces a counterfactual benchmark of roughly \$500 million in additional revenue under the New Mexico response. Because the cross-state interaction is estimated imprecisely, this should be interpreted as an indication of the potential magnitude rather than as a precise estimate of revenue lost because of entry restrictions.
+ Nevertheless, the direction of the evidence is consistent with research showing that licensing restrictions can constrain market expansion \citep{thomas2019license} and increase the market power of incumbent cannabis retailers \citep{HollenbeckUetake2021}. More broadly, the comparison suggests that the effect of a demand shock depends not only on how much demand becomes available, but also on whether the regulatory environment allows new firms to respond to it.
+
+\section{Conclusion}
+\label{conclusion}
+
+This paper studies how cannabis retail markets respond to captive cross-border demand and, in doing so, asks not only whether a localized demand opportunity expands the market but also how firms absorb it. The evidence from New Mexico cannabis market shows that markets exposed to demand from neighboring states where recreational cannabis remains illegal generate more cannabis revenue and support more dispensaries than comparable border markets without the same demand opportunity. The additional demand is therefore absorbed primarily through entry rather than through higher revenue at incumbent stores.
+
+Organizational form matters for how that entry unfolds. Chains respond quickly when the opportunity first becomes available, while independent retailers take longer to enter and catch up within roughly a year. The preparedness model interprets this timing difference as a consequence of reusable organizational capabilities: chains can prepare locations before legalization, allowing them to act sooner when the market opens, while independent firms require more time to complete the same process.
+
+Once markets settle, however, the organizational pattern changes. Independent entry responds more strongly to captive demand, and the structural counterfactual indicates that independent retailers account for most of the stores sustained by this borde demand. The direct test of own-network cannibalization does not establish why this long-run difference arises, which leaves open other explanations for the stronger response of independent firms.
+
+The Colorado comparison highlights the importance of entry regulation. When the ability of new firms to enter is more constrained, the response to captive demand appears less strongly through additional stores and more through the revenues of existing retailers. Although this comparison is suggestive rather than causal, it illustrates a broader point: the consequences of a demand shock depend not only on how much new demand becomes available, but also on who is able to respond to it.
+
+Taken together, the findings show that a localized demand shock can reshape a market through several distinct margins. Organizational capabilities determine who can respond first, subsequent entry determines how the opportunity is distributed across firms, and entry restrictions determine how much of the demand is absorbed by new entrants rather than incumbents. These distinctions matter beyond cannabis because they show how the same demand shock can produce very different market outcomes depending on the timing of entry, the organization of firms, and the regulatory environment governing competition.
+
+
+\newpage
+
+\appendix
+\section{Appendix}
+\renewcommand{\thetable}{A.\arabic{table}}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+
+\subsection{Additional Composition Robustness}
+\label{app:composition}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\input{tab_fact3_abq_robustness.tex}
+\caption{Composition result with Albuquerque included versus excluded from the pooled-control (legal-border $+$ interior) sample, full zero-inclusive 368-ZIP-code panel, inverse hyperbolic sine transformation. Albuquerque is interior by construction, so it does not affect the main (nonlegal- vs.\ always-legal-border) comparison.}
+\label{tab:fact3abq}
+\end{table}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\input{tab_townlevel_robustness.tex}
+\caption{Main specification re-estimated at the town level: full zero-inclusive panel of 78 town-markets (Albuquerque excluded), inverse hyperbolic sine transformation, same controls as the ZIP-code main specification (no market-age control).}
+\label{tab:townlevel}
+\end{table}
+
+\subsection{Additional Results for New Mexico}
+\label{app:nm}
+
+\begin{table}[htbp]
+\centering
+\caption{New Mexico dispensary-level border effect, noise-minimizing specification (grid-search selected)}
+\label{tab:nm_dispensary_border_best}
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+Outcome & Coef. (\%) & SE & $p$ (cl.) & $n$ & Brand FE \\
+\midrule
+Revenue per capita & $+0.149$ ($+16.1\%$) & 0.107 & 0.162 & 10725 & Yes \\
+Revenue (per dispensary) & $+0.150$ ($+16.2\%$) & 0.103 & 0.144 & 10739 & Yes \\
+Local dispensary density & $-0.154$ ($-14.3\%$) & 0.160 & 0.336 & 10739 & No \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} The sample consists of geocoded New Mexico dispensaries with valid coordinates (1,192 of 1,253). Border =
+dispensary within 75 miles of the nonlegal-state line, with $\geq$1,000 nonlegal-state residents within that
+distance. All specifications include a population control in logs and quarter fixed effects and use county-clustered standard errors;
+chain/brand fixed effects are included for the two revenue outcomes only (see text).
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Dose-response of dispensary outcomes to distance from the nonlegal-state line, New Mexico}
+\label{tab:nm_doseresponse}
+\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Distance band (mi) & Revenue per capita & Revenue per dispensary & Dispensary density \\
+\midrule
+0-25 & ref. & ref. & ref. \\
+25-50 & $+0.275$ ($+31.6\%$), $p=0.244$ & $+0.277$ ($+31.9\%$), $p=0.235$ & $+0.083$ ($+8.6\%$), $p=0.827$ \\
+50-75 & $+0.054$ ($+5.5\%$), $p=0.810$ & $+0.044$ ($+4.5\%$), $p=0.838$ & $-0.217$ ($-19.5\%$), $p=0.276$ \\
+75-100 & $+0.166$ ($+18.0\%$), $p=0.432$ & $+0.150$ ($+16.2\%$), $p=0.476$ & $-0.634$ ($-46.9\%$), $p=0.002$ \\
+100-125 & $+0.289$ ($+33.5\%$), $p=0.315$ & $+0.291$ ($+33.8\%$), $p=0.308$ & $-0.473$ ($-37.7\%$), $p=0.095$ \\
+125-150 & $+0.257$ ($+29.3\%$), $p=0.244$ & $+0.259$ ($+29.6\%$), $p=0.233$ & $-0.536$ ($-41.5\%$), $p=0.002$ \\
+150-175 & $+0.116$ ($+12.3\%$), $p=0.561$ & $+0.109$ ($+11.5\%$), $p=0.580$ & $-0.675$ ($-49.1\%$), $p<0.001$ \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Each column reports a separate regression of the indicated log outcome on the full set of distance-band
+indicators, with 0--25 miles as the omitted reference category, a log population control, and quarter fixed effects.
+The 175--200-mile band is excluded from the sample (see text). Standard errors are clustered at the county level.
+\end{minipage}
+\end{table}
+
+\input{table_nm_nonlegalpop_doseresponse.tex}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_nm_zip_noncannabis_placebo_legaleventstudy.png}
+\caption{Border coefficient by calendar quarter, non-cannabis sectors, New Mexico ZIP-quarter panel.
+$\text{Border}_z$ is interacted with each calendar quarter in the sample, anchored to New Mexico's own
+legalization date; 95\% confidence intervals are ZIP-clustered.}
+\label{fig:noncannabis_eventstudy}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_nm_zip_eventstudy_50_100mi.png}
+\caption{Dynamic border premium under the 50-mile and 100-mile border definitions. Reference quarter: 2022Q2; county-clustered 95\% confidence intervals.}
+\label{fig:eventstudy_50_100mi}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_nm_doseresponse.png}
+\caption{Dose-response of dispensary outcomes to distance from the nonlegal-state line, New Mexico. The omitted reference category is 0--25 miles. County-clustered 95\% confidence intervals.}
+\label{fig:nm_doseresponse}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_nm_nonlegalpop_doseresponse.png}
+\caption{Dose-response of the New Mexico border premium to nearby nonlegal-state population. New Mexico ZIP codes are grouped by the number of Texas, Oklahoma, or Utah residents living within 75 miles of the ZIP centroid; the reference category consists of ZIP codes with essentially no such residents. Quarter fixed effects, county-clustered 95\% confidence intervals.}
+\label{fig:nm_nonlegalpop_doseresponse}
+\end{figure}
+
+\subsection{Cross-State Entry-Regime Comparisons}
+\label{sec:crossstate}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig1_southwest_map.png}
+\caption{Dispensary density and the nonlegal-state border, New Mexico and
+Colorado, 2025. Shading indicates dispensaries per 1,000 residents in 2025. Red outlines identify counties containing at least one
+border-exposed dispensary (19 in New Mexico and 17 in Colorado).}
+\label{fig:setting}
+\label{map}
+\end{figure}
+
+\input{tab_sumstats_state.tex}
+\input{table_regime_interaction}
+\input{table_counterfactual.tex}
+
+\subsection{Technical Appendix: Estimation of the Entry Game}
+\label{app:computation}
+
+\subsubsection{Vectorized Newton solution of the Bayesian--Nash fixed point}
+For a fixed $\theta$, every market-period's fixed point $(N^{I*}_{zt},N^{C*}_{zt})$ solves its own two-equation system, independent of every other market-period's, so the $n$-market-period problem decomposes into $n$ independent $2\times2$ systems, solved in one vectorized pass. Writing $F_1 = N^I - R_I(N^C)$ and $F_2 = N^C - R_C(N^I)$, the Jacobian of $(F_1,F_2)$ with respect to $(N^I,N^C)$ is
+\[
+J = \begin{pmatrix} 1 & -R_I'(N^C) \\ -R_C'(N^I) & 1 \end{pmatrix}, \qquad R_I'(N^C) = -\gamma_{IC}\sum_{k=1}^{\bar K}\Lambda\big(\pi^I(k)\big)\big(1-\Lambda\big(\pi^I(k)\big)\big),
+\]
+and symmetrically for $R_C'(N^I)$. With $a \equiv -R_I'(N^C)$, $b \equiv -R_C'(N^I)$, the Newton step has the closed form
+\[
+\Delta N^I = \frac{-F_1 + aF_2}{1-ab}, \qquad \Delta N^C = \frac{bF_1 - F_2}{1-ab},
+\]
+applied elementwise across all market-periods simultaneously. The solver runs six damped best-response iterations, to enter Newton's basin of attraction, followed by up to 60 Newton steps with a bounded step size, clipping $(N^I,N^C)$ to $[0,\bar K]$ at each iterate; $\bar K=80$.
+
+\subsubsection{Sparse two-way fixed-effects PPML}
+\label{app:ppml}
+The mechanism regression's risk-set panel (Section~\ref{sec:mechreg}) has several hundred thousand rows and, with operator and quarter fixed effects, hundreds of parameters -- large enough that dense dummy-variable encoding is not memory-feasible. The estimator implements Poisson IRLS directly on a sparse design matrix: at each iterate, the weighted normal equations $X'WX\,\Delta\beta = X'W(z-X\beta)$ ($W=\text{diag}(\hat\mu)$, the canonical Poisson IRLS weight; $z$ the working response) are formed via sparse matrix products, so only the resulting small dense system is ever solved directly. Standard errors are cluster-robust by operator, computed with the same sparse machinery.
+
+\newpage
+\begin{singlespace}
+\bibliographystyle{aer}
+
+\bibliography{bibliography.bib}
+
+\end{singlespace}
+
+\end{document}
+
+\section*{Declarations}
+\begin{singlespace}
+\noindent \textbf{Data availability.} This study uses only publicly available data. New Mexico cannabis sales and licensed-establishment records are published by the New Mexico Cannabis Control Division; Colorado county-level marijuana sales and licensee records are published by the Colorado Department of Revenue; population, geographic, and business-pattern data are obtained from the U.S. Census Bureau and the SimpleMaps U.S. ZIP Code Database. The code used to construct the analysis panels and reproduce all tables and figures is available from the author upon request.
+
+\smallskip
+\noindent \textbf{Conflicts of interest.} The author has no competing interests relevant to the content of this article.
+
+\smallskip
+\noindent \textbf{Funding.} The author received no specific funding for this work.
+
+\smallskip
+\noindent \textbf{Use of AI tools.} The author used generative AI assistance for LaTeX formatting, code implementation, and copy-editing. All analysis, results, and interpretation are the author's own.
+\end{singlespace}
+
+
+
+
+
+

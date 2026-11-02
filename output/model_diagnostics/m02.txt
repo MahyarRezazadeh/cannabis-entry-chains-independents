@@ -1,0 +1,19 @@
+within-ZIP stock coefficients used in version B: F -1.051, expansions -0.887
+
+[version A] baseline: store-quarters 10909, openings 937, revenue $2.70bn, NL/LB gap 1.01, density share 0.77
+  CF1a      d store-quarters    -5345 [-6118,-4165] (-49.0%) | d revenue $   -1290m [-2249,-732] (-47.8%) | d openings   -338 [-450,-184] | d early availability -0.065 | d first-year store-quarters -1097 [-1152,-1007] (-63.8%) | rev/store +0.9% | density share 0.64
+  CF1b      d store-quarters    -6287 [-7046,-5257] (-57.6%) | d revenue $   -1573m [-2596,-999] (-58.3%) | d openings   -435 [-552,-289] | d early availability -0.089 | d first-year store-quarters -1191 [-1241,-1136] (-69.2%) | rev/store -2.6% | density share 0.59
+  CF2_1     d store-quarters     +508 [+450,+599] (+4.7%) | d revenue $    +110m [+65,+198] (+4.1%) | d openings    +26 [+17,+36] | d early availability +0.012 | d first-year store-quarters +196 [+181,+226] (+11.4%) | rev/store -0.7% | density share 0.76
+  CF2_2     d store-quarters     +901 [+765,+1097] (+8.3%) | d revenue $    +194m [+114,+351] (+7.2%) | d openings    +42 [+22,+64] | d early availability +0.024 | d first-year store-quarters +361 [+327,+420] (+21.0%) | rev/store -1.2% | density share 0.75
+  CF3_0.10  d store-quarters    -4894 [-5589,-4585] (-44.9%) | d revenue $   -1148m [-2033,-675] (-42.5%) | d openings   -635 [-728,-594] | d early availability +0.000 | d first-year store-quarters -407 [-459,-380] (-23.6%) | rev/store +6.7% | density share 0.36
+  CF3_0.19  d store-quarters    -4117 [-4755,-3823] (-37.7%) | d revenue $    -907m [-1661,-523] (-33.6%) | d openings   -541 [-632,-502] | d early availability +0.000 | d first-year store-quarters -326 [-372,-303] (-18.9%) | rev/store +8.5% | density share 0.40
+  CF3_0.30  d store-quarters    -3037 [-3584,-2767] (-27.8%) | d revenue $    -637m [-1216,-359] (-23.6%) | d openings   -410 [-493,-373] | d early availability +0.000 | d first-year store-quarters -207 [-245,-187] (-12.0%) | rev/store +7.0% | density share 0.51
+
+[version B] baseline: store-quarters 10494, openings 867, revenue $2.63bn, NL/LB gap 0.97, density share 0.78
+  CF1a      d store-quarters     -492 [-610,-226] (-4.7%) | d revenue $      -3m [-39,+76] (-0.1%) | d openings   +207 [+199,+224] | d early availability -0.040 | d first-year store-quarters -325 [-372,-224] (-19.1%) | rev/store +2.6% | density share 0.78
+  CF1b      d store-quarters     -913 [-1070,-653] (-8.7%) | d revenue $    -134m [-248,-55] (-5.1%) | d openings   +212 [+204,+225] | d early availability -0.048 | d first-year store-quarters -515 [-574,-407] (-30.3%) | rev/store +1.8% | density share 0.78
+  CF2_1     d store-quarters     +649 [+625,+722] (+6.2%) | d revenue $    +147m [+89,+259] (+5.6%) | d openings    +25 [+22,+31] | d early availability +0.015 | d first-year store-quarters +288 [+268,+336] (+17.0%) | rev/store -0.7% | density share 0.78
+  CF2_2     d store-quarters    +1403 [+1339,+1586] (+13.4%) | d revenue $    +314m [+188,+559] (+11.9%) | d openings    +61 [+57,+72] | d early availability +0.031 | d first-year store-quarters +603 [+558,+708] (+35.5%) | rev/store -1.6% | density share 0.79
+  CF3_0.10  d store-quarters    -4500 [-5066,-4194] (-42.9%) | d revenue $   -1067m [-1877,-645] (-40.5%) | d openings   -547 [-614,-510] | d early availability +0.000 | d first-year store-quarters -400 [-470,-370] (-23.6%) | rev/store +6.5% | density share 0.45
+  CF3_0.19  d store-quarters    -3736 [-4253,-3449] (-35.6%) | d revenue $    -828m [-1496,-500] (-31.5%) | d openings   -456 [-519,-424] | d early availability +0.000 | d first-year store-quarters -318 [-376,-292] (-18.7%) | rev/store +8.2% | density share 0.48
+  CF3_0.30  d store-quarters    -2686 [-3135,-2451] (-25.6%) | d revenue $    -570m [-1051,-346] (-21.7%) | d openings   -331 [-383,-302] | d early availability +0.000 | d first-year store-quarters -199 [-248,-177] (-11.7%) | rev/store +6.3% | density share 0.59

@@ -1,0 +1,77 @@
+Status (all storefronts): {'single': 467, 'first_loc': 395, 'established': 370}
+Entries (not operating at market opening): 928; by status {'single': 413, 'established': 370, 'first_loc': 145}
+Entries by group x status:
+status    established  first_loc  single  All
+group                                        
+interior          220         76     206  502
+legal              23          9      32   64
+nonlegal          127         60     175  362
+All               370        145     413  928
+2nd-storefront entries by group: {'interior': 60, 'nonlegal': 54, 'legal': 8}
+
+Main panel: 209 ZIPs, 3553 ZIP-quarters, 23 counties
+
+[established] entries NL=127 LB=23; per 100k residents over sample NL=24.27 LB=10.48
+  (a) PPML ZIP-qtr      : +0.765 (SE 0.309) p=0.013  IRR=2.15
+  (b) OLS per 100k      : +0.485 (SE 0.673) p=0.471  mean LB=0.810
+  (c) PPML ZIP totals   : +0.765 (SE 0.310) p=0.014
+
+[second] entries NL=54 LB=8; per 100k residents over sample NL=10.32 LB=3.65
+  (a) PPML ZIP-qtr      : +1.141 (SE 0.402) p=0.005  IRR=3.13
+  (b) OLS per 100k      : -0.184 (SE 0.615) p=0.765  mean LB=0.755
+  (c) PPML ZIP totals   : +1.141 (SE 0.403) p=0.005
+
+[single] entries NL=175 LB=32; per 100k residents over sample NL=33.44 LB=14.59
+  (a) PPML ZIP-qtr      : +0.867 (SE 0.240) p=0.000  IRR=2.38
+  (b) OLS per 100k      : +0.670 (SE 0.404) p=0.097  mean LB=0.732
+  (c) PPML ZIP totals   : +0.867 (SE 0.241) p=0.000
+
+[first_loc] entries NL=60 LB=9; per 100k residents over sample NL=11.47 LB=4.10
+  (a) PPML ZIP-qtr      : +0.924 (SE 0.529) p=0.081  IRR=2.52
+  (b) OLS per 100k      : +0.353 (SE 0.229) p=0.124  mean LB=0.119
+  (c) PPML ZIP totals   : +0.924 (SE 0.530) p=0.081
+
+[all] entries NL=362 LB=64; per 100k residents over sample NL=69.18 LB=29.17
+  (a) PPML ZIP-qtr      : +0.841 (SE 0.259) p=0.001  IRR=2.32
+  (b) OLS per 100k      : +1.508 (SE 0.951) p=0.113  mean LB=1.662
+  (c) PPML ZIP totals   : +0.841 (SE 0.260) p=0.001
+
+Composition of entrants (n=426; NL=362, LB=64)
+  share established: NL=0.351 LB=0.359; LPM diff -0.014 (SE 0.044) p=0.758
+  share second: NL=0.149 LB=0.125; LPM diff +0.034 (SE 0.039) p=0.391
+  share single: NL=0.483 LB=0.500; LPM diff +0.000 (SE 0.067) p=0.997
+  share first_loc: NL=0.166 LB=0.141; LPM diff +0.013 (SE 0.042) p=0.750
+
+Active storefronts per 1,000 residents by status (ZIP-quarter OLS, log pop + quarter FE):
+  established: NL mean=0.060 LB mean=0.050; diff +0.012 (SE 0.039) p=0.760
+  single: NL mean=0.129 LB mean=0.051; diff +0.071 (SE 0.029) p=0.014
+  first_loc: NL mean=0.087 LB mean=0.044; diff +0.038 (SE 0.038) p=0.322
+
+Robustness: drop entries in the first sample quarter (2022Q2)
+  [established] PPML +0.765 (SE 0.309) p=0.013
+  [second] PPML +1.141 (SE 0.402) p=0.005
+  [single] PPML +0.867 (SE 0.240) p=0.000
+  [first_loc] PPML +0.924 (SE 0.529) p=0.081
+  [all] PPML +0.841 (SE 0.259) p=0.001
+
+Population-weighted OLS, entries per 100k residents:
+  [established] +0.732 (SE 0.259) p=0.005
+  [second] +0.441 (SE 0.142) p=0.002
+  [single] +1.168 (SE 0.354) p=0.001
+  [first_loc] +0.383 (SE 0.160) p=0.017
+  [all] +2.283 (SE 0.643) p=0.000
+
+Stacked PPML: does the nonlegal-border effect differ by type? (base = single)
+  nonlegal: +0.867 (SE 0.240) p=0.000
+  C(typ, Treatment('single'))[T.established]:nonlegal: -0.102 (SE 0.283) p=0.718
+  C(typ, Treatment('single'))[T.first_loc]:nonlegal: +0.057 (SE 0.471) p=0.905
+
+Leave out the county with the most entries in each group (PPML):
+  drop legal county 35017 [established]: +1.029 (SE 0.329) p=0.002
+  drop legal county 35017 [second]: +1.297 (SE 0.484) p=0.007
+  drop legal county 35017 [single]: +0.936 (SE 0.264) p=0.000
+  drop legal county 35017 [first_loc]: +1.592 (SE 0.473) p=0.001
+  drop nonlegal county 35013 [established]: +0.698 (SE 0.363) p=0.054
+  drop nonlegal county 35013 [second]: +1.174 (SE 0.466) p=0.012
+  drop nonlegal county 35013 [single]: +0.640 (SE 0.240) p=0.008
+  drop nonlegal county 35013 [first_loc]: +0.931 (SE 0.580) p=0.109

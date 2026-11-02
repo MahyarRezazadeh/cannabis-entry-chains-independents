@@ -1,0 +1,21 @@
+ZIPs qualifying on both rules (assigned nonlegal): 14
+Storefronts: 1255; ZIP-snapped: 13; brands: 652; chain brands (>=2 NM storefronts): 181; storefronts of chain brands: 784
+Storefronts ever active 2022Q2-2026Q2: 1232; active storefront-quarters: 10653
+ZIPs with >=1 dispensary in some quarter: 125 (by group: {'interior': 66, 'legal': 24, 'nonlegal': 35})
+ZIP-quarters with >=1 dispensary: 1745 (by group: {'interior': 990, 'legal': 262, 'nonlegal': 493})
+Population: zero-pop ZIPs=0; min pop=7
+Main sample: 209 ZIPs, 3553 ZIP-quarters, 23 counties; pooled: 33 counties
+Main sample revenue-per-store obs (ZIP-quarters with >=1 store): 755; pooled: 1745
+Share of zero ZIP-quarters: main 0.788, pooled 0.721
+Conditional sample: 125 ZIPs, 1745 ZIP-quarters; main groups only: 59 ZIPs, 755 ZIP-quarters
+[nonlegal] rev_pc=60.5 density=0.277 rps=199.2 indep=0.99 chain=1.24 any=0.315 pop=5,688 median pop=874
+[legal] rev_pc=11.9 density=0.145 rps=126.6 indep=0.15 chain=0.20 any=0.132 pop=1,875 median pop=624
+[interior] rev_pc=23.2 density=0.178 rps=195.3 indep=0.75 chain=1.46 any=0.366 pop=8,262 median pop=1,139
+At-entry status (storefronts active 2022Q2-2026Q2): {'single': 467, 'first_loc': 395, 'established': 370}; left-censored (operating at market opening): 304
+Dispensary panel: 1232 storefronts, 10653 storefront-quarters; 1-km population matched for 1.000 of storefronts
+Dispensary panel by group: {'interior': 705, 'legal': 80, 'nonlegal': 447} storefronts; {'interior': 6249, 'legal': 689, 'nonlegal': 3715} storefront-quarters; brands 648
+  rev_1km non-missing obs: 9584, storefronts 1095
+Town panel (ex-ABQ): 78 towns x 17 = 1326 town-quarters; by group {'interior': 31, 'nonlegal': 28, 'legal': 19}
+Albuquerque-metro ZIPs (all interior): 28
+Counties: conditional sample 31; dispensary panel 31
+Total sales 2022Q2-2026Q2: $2.31bn

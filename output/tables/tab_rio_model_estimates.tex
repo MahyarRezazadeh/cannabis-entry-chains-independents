@@ -1,0 +1,48 @@
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & \multicolumn{3}{c}{Openings (Poisson)} \\
+\cmidrule(lr){2-4}
+ & First location & Expansion, medical & Expansion, other \\
+ & of an operator & incumbent operator & operator \\
+\midrule
+Log resident population & $+0.462^{***}$ & $+0.868^{***}$ & $+0.464^{***}$ \\
+ & (0.072) & (0.136) & (0.100) \\
+Log nonlegal-state residents within 75 mi, $\log(1+B/1000)$ & $+0.085^{**}$ & $-0.077^{**}$ & $+0.055$ \\
+ & (0.034) & (0.035) & (0.052) \\
+Log legal-state residents within 75 mi & $-0.045$ & $-0.324^{***}$ & $-0.143^{***}$ \\
+ & (0.035) & (0.106) & (0.050) \\
+Log population density & $+0.145^{***}$ & $+0.074$ & $+0.090$ \\
+ & (0.047) & (0.067) & (0.065) \\
+Distance to Albuquerque (100 mi) & $+0.140$ & $+0.314^{**}$ & $+0.082$ \\
+ & (0.116) & (0.150) & (0.203) \\
+Distance to nearest city $\geq$50k (100 mi) & $+0.458^{*}$ & $+0.634^{**}$ & $+0.487$ \\
+ & (0.261) & (0.321) & (0.341) \\
+Retail establishments per 1,000, 2019 (asinh) & $+0.299^{***}$ & $+0.403^{**}$ & $+0.436^{***}$ \\
+ & (0.097) & (0.199) & (0.085) \\
+Centroid on tribal land & $-0.343$ & $+0.416$ & $-0.217$ \\
+ & (0.234) & (0.467) & (0.227) \\
+Log(1 + operating stores), previous quarter & $+0.833^{***}$ & $+0.277$ & $+0.909^{***}$ \\
+ & (0.188) & (0.326) & (0.168) \\
+Log(1 + stores in 2022Q2), initial-condition proxy & $-0.269^{*}$ & $+0.118$ & $-0.424^{***}$ \\
+ & (0.164) & (0.233) & (0.145) \\
+Log quarters since opening & $-0.376^{**}$ & $-0.209$ & $+0.350$ \\
+ & (0.162) & (0.220) & (0.356) \\
+Quarters since opening & $-0.066^{**}$ & $-0.115^{***}$ & $-0.037$ \\
+ & (0.027) & (0.042) & (0.038) \\
+\midrule
+Openings & 558 & 160 & 210 \\
+ZIP-quarters & \multicolumn{3}{c}{5,888 (368 ZIPs, 2022Q3--2026Q2)} \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Exit (logit, store-quarters) and revenue}} \\
+Exit: log(1 + operating stores in ZIP) & $+0.218^{***}$ & & \\
+ & (0.071) & & \\
+Exit: log nonlegal-state residents & $-0.005$ & & \\
+ & (0.016) & & \\
+Exit: log population & $-0.073$ & & \\
+ & (0.056) & & \\
+Exit: log quarters since opening & $+0.791^{***}$ & & \\
+ & (0.075) & & \\
+Revenue: elasticity of market revenue to the store count, $\sigma$ & $+0.806^{***}$ & & \\
+ & (0.104) & & \\
+\bottomrule
+\end{tabular}

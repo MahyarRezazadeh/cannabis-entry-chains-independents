@@ -1,0 +1,29 @@
+A. Operator level (statewide), by lifetime type
+       operators  share_med  share_open  mean_t_entry  share_year1
+chain                                                             
+0            472      0.053       0.119         5.767        0.367
+1            176      0.284       0.403         2.972        0.670
+
+B. Prepared share phi = active stores 2022Q2 / active stores 2026Q2 (lifetime type)
+  nonlegal  chain 61/128 = 0.48   indep 17/107 = 0.16
+  legal     chain 14/29 = 0.48   indep 2/26 = 0.08
+  interior  chain 175/235 = 0.74   indep 35/115 = 0.30
+  border gap in stores per 10,000 (NL - LB):
+    chain: 2022Q2 0.528, 2026Q2 1.124, share present at opening 0.47
+    indep: 2022Q2 0.234, 2026Q2 0.860, share present at opening 0.27
+
+C. Operator entry timing: chain vs single (statewide operators; cluster = county of first store)
+  t_entry ~ chain        chain -2.795 (SE 0.467, p 0.000)  N=648
+  t_entry ~ chain + med  chain -1.658 (SE 0.546, p 0.002); med -4.923 (SE 0.240)  N=648
+  year1 ~ chain          chain +0.304 (SE 0.054, p 0.000)  N=648
+  year1 ~ chain + med    chain +0.178 (SE 0.062, p 0.004); med +0.543 (SE 0.025)  N=648
+  Operators with no medical incumbent only:
+    t_entry  chain -1.939 (SE 0.595, p 0.001); single mean 6.09, N=573
+    year1    chain +0.209 (SE 0.068, p 0.002); single mean 0.33, N=573
+    share entering in 2022Q2: chain 0.167, single 0.069
+    first store in nonlegal: N chain 51, single 189; mean t_entry chain 3.84, single 6.53
+    first store in legal: N chain 11, single 32; mean t_entry chain 3.18, single 7.03
+
+D. NLS fit gap_k(t) = b_k[1-(1-phi_k)exp(-lam t)], common lam
+  b_chain 1.425, b_indep 1.135, phi_chain 0.25, phi_indep 0.11, lam 0.368
+  bootstrap (500 ZIP resamples within group): phi_chain 95% CI [-0.40, 0.59], phi_indep [-0.14, 0.56], phi_chain - phi_indep: mean 0.10, CI [-0.78, 0.62]

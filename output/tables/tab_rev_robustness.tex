@@ -1,0 +1,44 @@
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & Revenue per & Dispensaries & log revenue & ZIP & of which \\
+ & resident (asinh) & per 1,000 (asinh) & per dispensary & codes & nonlegal \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A: Predetermined controls}} \\
+Baseline (pooled Table 3 specification) & $+0.835^{***}$ & $+0.109^{**}$ & $+0.260$ & 209 & 92 \\
+ & (0.263) & (0.045) & (0.199) & & \\
++ geography (density, distance to ABQ and to city $\geq$50k) & $+0.448$ & $+0.075$ & $+0.348$ & 209 & 92 \\
+ & (0.347) & (0.072) & (0.287) & & \\
++ geography + 2019 retail establishments & $+0.475^{*}$ & $+0.081$ & $+0.320$ & 209 & 92 \\
+ & (0.263) & (0.052) & (0.262) & & \\
++ geography + 2019 retail + medical incumbents & $+0.224$ & $+0.033$ & $+0.171$ & 209 & 92 \\
+ & (0.249) & (0.051) & (0.213) & & \\
+\addlinespace\multicolumn{6}{@{}l}{\textit{Panel B: Leave-one-border-state-out and leave-one-market-out}} \\
+Drop nonlegal ZIPs nearest Texas & $-0.097$ & $-0.037$ & $-0.029$ & 129 & 12 \\
+ & (0.245) & (0.034) & (0.156) & & \\
+Drop nonlegal ZIPs nearest Utah & $+0.979^{***}$ & $+0.132^{**}$ & $+0.279$ & 199 & 82 \\
+ & (0.255) & (0.047) & (0.205) & & \\
+Drop always-legal ZIPs nearest Colorado & $+1.013^{**}$ & $+0.127^{*}$ & $+0.382$ & 145 & 92 \\
+ & (0.406) & (0.065) & (0.338) & & \\
+Drop always-legal ZIPs nearest Arizona & $+0.666^{***}$ & $+0.092^{**}$ & $+0.196$ & 156 & 92 \\
+ & (0.212) & (0.043) & (0.161) & & \\
+Drop largest nonlegal-border county (Doña Ana) & $+0.858^{**}$ & $+0.107^{*}$ & $+0.327$ & 184 & 67 \\
+ & (0.315) & (0.058) & (0.216) & & \\
+Drop largest always-legal-border county (McKinley) & $+0.636^{***}$ & $+0.083^{**}$ & $+0.334$ & 190 & 92 \\
+ & (0.202) & (0.039) & (0.200) & & \\
+Drop top 5\% of ZIPs by revenue per resident & $+0.544^{***}$ & $+0.045$ & $-0.102$ & 198 & 83 \\
+ & (0.178) & (0.027) & (0.181) & & \\
+\addlinespace\multicolumn{6}{@{}l}{\textit{Panel C: Exposure definition and control group}} \\
+50-mile exposure definition & $+1.127^{***}$ & $+0.166^{***}$ & $+0.332$ & 127 & 54 \\
+ & (0.327) & (0.051) & (0.196) & & \\
+100-mile exposure definition & $+0.657^{***}$ & $+0.091^{**}$ & $-0.136$ & 272 & 133 \\
+ & (0.197) & (0.037) & (0.192) & & \\
+Pooled control (adds 159 interior ZIPs) & $+0.575^{**}$ & $+0.096^{**}$ & $+0.284^{**}$ & 368 & 92 \\
+ & (0.244) & (0.041) & (0.139) & & \\
+\addlinespace\multicolumn{6}{@{}l}{\textit{Panel D: Inference for the baseline (row 1)}} \\
+Wild cluster bootstrap $p$-value & 0.004 & 0.035 & 0.238 & & \\
+Conley SE, 50-mile cutoff & (0.222) & (0.045) & (0.205) & & \\
+Conley SE, 100-mile cutoff & (0.216) & (0.040) & (0.199) & & \\
+County jackknife range (23 fits) & [+0.64, +0.96] & [+0.08, +0.12] & [+0.13, +0.33] & & \\
+\bottomrule
+\end{tabular}

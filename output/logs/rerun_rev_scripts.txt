@@ -1,0 +1,10 @@
+﻿
+rev02_identification_robustness.py exit=0 time=19s
+rev02b_controls_diagnostics.py exit=0 time=17s
+rev03_decomposition_incumbents.py exit=0 time=50s
+rev04_org_dynamics.py exit=0 time=9s
+rev05_placebo.py exit=0 time=7s
+rev06_structural_diagnostics.py exit=0 time=7s
+rev07_med_incumbent_trajectories.py exit=0 time=4s
+rev08_preparedness_by_type.py exit=0 time=14s
+rev09_chain_minus_indep.py exit=0 time=8s

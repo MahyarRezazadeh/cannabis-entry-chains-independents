@@ -1,0 +1,90 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Border Premium in New Mexico}
+\label{tab:nm_baseline}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc}
+\toprule
+& (1) & (2) & (3) \\
+& \shortstack{Dispensary\\revenue}
+& \shortstack{Number of\\dispensaries}
+& \shortstack{Revenue per\\dispensary} \\
+& $\log(y)$
+& $\log(y)$
+& $\log(y)$ \\
+\midrule
+
+Border ZIP
+    & $0.639^{***}$
+    & $0.383^{***}$
+    & $0.255^{*}$ \\
+    & (0.223)
+    & (0.120)
+    & (0.149) \\
+
+\addlinespace
+
+$\log(\text{Population})$
+    & $0.561^{***}$
+    & $0.319^{***}$
+    & $0.242^{***}$ \\
+    & (0.078)
+    & (0.046)
+    & (0.051) \\
+
+\midrule
+
+Quarter fixed effects
+    & Yes & Yes & Yes \\
+
+Observations
+    & 1,704
+    & 1,704
+    & 1,704 \\
+
+Number of ZIP codes
+    & 116
+    & 116
+    & 116 \\
+
+$R^{2}$
+    & 0.271
+    & 0.257
+    & 0.167 \\
+
+\bottomrule
+\end{tabular*}
+
+\begin{minipage}{\textwidth}
+\vspace{0.4em}
+\fontsize{9pt}{9pt}\selectfont
+
+\textit{Notes:}
+The unit of observation is a ZIP--quarter. The sample covers New Mexico from
+2022Q2 through 2026Q3 and is restricted to the 116 ZIP codes that record at
+least one operating dispensary at some point in the sample. The outcome is the
+natural log of total quarterly dispensary revenue in column~(1), the log of the
+number of operating dispensaries in column~(2), and the log of revenue per
+operating dispensary in column~(3).
+
+$\text{Population}$ is the ZIP code's own resident population. Its coefficient is
+the elasticity of the outcome with respect to local population and serves as a
+scale control; it is not a measure of cross-border or captive demand, which
+enters only through Border ZIP. For columns~(1) and~(2) this specification is
+algebraically identical to regressing the corresponding per-resident outcome
+(revenue per capita, dispensaries per capita) on the same regressors: the Border
+coefficient is unchanged and only the population coefficient shifts by one. In
+percentage terms ($e^{\hat\beta}-1$), border ZIP codes have about 89 percent
+more dispensary revenue, 47 percent more dispensaries, and 29 percent more
+revenue per dispensary than interior ZIP codes with the same resident
+population.
+
+Border ZIP is an indicator equal to one if the ZIP-code centroid is within
+75 miles of the border with Texas, Oklahoma, or Utah and at least 1,000
+residents of those nonlegal states live within the same 75-mile radius.
+All specifications include quarter fixed effects. Standard errors, reported in
+parentheses, are clustered at the county level.
+\end{minipage}
+
+\end{table}

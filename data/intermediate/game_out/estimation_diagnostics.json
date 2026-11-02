@@ -1,0 +1,38 @@
+{
+  "conv_restricted": {
+    "n_starts": 4,
+    "best_ssr": 1081.288471885484,
+    "ssr_min": 1081.288471885484,
+    "ssr_max": 1122.9932254439823,
+    "n_converged_to_global": 3,
+    "time_s": 185.09494733810425,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+  },
+  "conv_unrestricted": {
+    "n_starts": 4,
+    "best_ssr": 1104.2391868424934,
+    "ssr_min": 1104.2391868424934,
+    "ssr_max": 1150.8482935983202,
+    "n_converged_to_global": 1,
+    "time_s": 82.67515206336975,
+    "success": false,
+    "message": "Maximum number of iterations has been exceeded."
+  },
+  "unrestricted_gammas": {
+    "gamma_II": 0.002035382498880238,
+    "gamma_CC": 2.9451532852007,
+    "gamma_IC": 0.0010019982305082874,
+    "gamma_CI": -1.0409704194363054
+  },
+  "restricted_gammas": {
+    "gamma_same": 0.008221996927776193,
+    "gamma_other": -0.028276195538066432
+  },
+  "unique_equilibrium": true,
+  "max_diff_I": 4.973799150320701e-14,
+  "max_diff_C": 1.7763568394002505e-14,
+  "n_towns": 78,
+  "n_obs": 702,
+  "n_quarters": 9
+}

@@ -1,0 +1,25 @@
+Unified test: beta_I,q - beta_C,q (asinh operator counts), 209 ZIPs, county-clustered
+  [Lifetime] 2022Q2: I +0.055(0.078) C +0.219(0.079) I-C -0.165(0.032)*** | early avg -0.109(0.032) p=0.002 | late avg -0.012(0.044) p=0.781, 90% CI [-0.088,+0.063], TOST p (margin 0.109) = 0.019 | sig early 3/4, late 0/9
+  [Predetermined at opening] 2022Q2: I +0.081(0.101) C +0.203(0.050) I-C -0.122(0.069)* | early avg +0.008(0.054) p=0.890 | late avg +0.270(0.066) p=0.000, 90% CI [+0.157,+0.382], TOST p (margin 0.008) = 1.000 | sig early 0/4, late 9/9
+  [Status at entry] 2022Q2: I +0.233(0.096) C -0.035(0.055) I-C +0.268(0.050)*** | early avg +0.279(0.048) p=0.000 | late avg +0.169(0.065) p=0.017, 90% CI [+0.057,+0.281], TOST p (margin 0.279) = 0.052 | sig early 4/4, late 6/9
+  [Lifetime, excl. stores open in 2022Q2] 2022Q2: I -0.052(0.080) C -0.047(0.074) I-C -0.005(0.007) | early avg -0.005(0.021) p=0.827 | late avg +0.020(0.037) p=0.607, 90% CI [-0.045,+0.084], TOST p (margin 0.005) = 0.653 | sig early 0/4, late 0/9
+  [Predetermined, excl. stores open in 2022Q2] 2022Q2: I -0.066(0.102) C -0.021(0.032) I-C -0.045(0.070) | early avg +0.100(0.060) p=0.111 | late avg +0.348(0.077) p=0.000, 90% CI [+0.216,+0.481], TOST p (margin 0.100) = 0.998 | sig early 2/4, late 9/9
+  [At entry, excl. stores open in 2022Q2] 2022Q2: I -0.061(0.095) C -0.035(0.055) I-C -0.026(0.040) | early avg +0.093(0.038) p=0.022 | late avg +0.135(0.050) p=0.013, 90% CI [+0.050,+0.221], TOST p (margin 0.093) = 0.797 | sig early 3/4, late 4/9
+
+Interpretable magnitudes, lifetime classification (mean operators per NL ZIP-quarter, actual vs. NL indicator switched off)
+  I 2022Q2: sinh(fitted) 0.146 vs counterfactual 0.084 (actual mean 0.185)
+  I 2026Q2: sinh(fitted) 0.627 vs counterfactual 0.247 (actual mean 1.163)
+  C 2022Q2: sinh(fitted) 0.425 vs counterfactual 0.163 (actual mean 0.663)
+  C 2026Q2: sinh(fitted) 0.645 vs counterfactual 0.229 (actual mean 1.293)
+
+Preparedness proxies (predetermined): operator storefronts in 2022Q2, medical-incumbent operator
+  Quarters from opening to entry: exp_open +0.753(0.657)  med_operator -3.200(0.941)***  nonlegal +0.051(0.559)  exp_open:nonlegal -0.173(0.606)  N=426, mean 7.34
+  Entered within first year (LPM): exp_open -0.177(0.083)**  med_operator +0.487(0.182)***  nonlegal -0.028(0.047)  exp_open:nonlegal +0.032(0.061)  N=426, mean 0.24
+  2022Q2 stock in nonlegal ZIPs: 78 storefronts; chain(life) 61, of which medical incumbents 45; independent(life) 17, medical incumbents 5
+  2022Q2 stock in legal ZIPs: 16 storefronts; chain(life) 14, of which medical incumbents 8; independent(life) 2, medical incumbents 2
+  first-location storefronts (operator expands later) entering after opening: 145; share whose operator's 2nd store opened later than this one: by construction 100%
+
+Diffusion model refit: beta_k(t) = b_inf [1 - (1 - phi_k) exp(-lambda t)], WNLS on quarter coefficients
+  [Lifetime] b_inf 0.363(0.005) lambda 0.409(0.043) phi_I 0.086(0.053) phi_C 0.570(0.049); phi_C - phi_I +0.484 (0.068)
+  [Predetermined at opening] b_inf 0.240(0.019) lambda 1.198(2.406) phi_I 0.348(0.678) phi_C 0.795(0.338); phi_C - phi_I +0.447 (0.745)
+  [Status at entry] b_inf 0.440(0.043) lambda 0.082(0.017) phi_I 0.805(0.131) phi_C -0.015(0.046); phi_C - phi_I -0.821 (0.151)

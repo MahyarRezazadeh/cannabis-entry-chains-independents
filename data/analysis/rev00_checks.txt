@@ -1,0 +1,10 @@
+main: 209 ZIPs, 3553 ZIP-qtrs, 23 counties; pooled: 368 ZIPs
+[check] Table 3: max |published - rebuilt| = 0.0005
+[check] Table 4 cols 1-2: max |published - rebuilt| = 0.0005
+[check] own nonlegal pop within 75 mi vs zip_xwalk.nonleg_pop_75: corr = 1.000; ratio of means = 1.000
+big NM cities (>=50k, summed ZIP pop): ['Albuquerque', 'Farmington', 'Las Cruces', 'Rio Rancho', 'Roswell', 'Santa Fe']
+medical incumbents (storefronts with medical sales in April 2022): 226
+storefronts active in 2022Q2: 304; status_entry: {'single': 467, 'first_loc': 395, 'established': 370}; chain_pre storefronts: 374
+[nonlegal] n=92 nearest_nonlegal={'TX': 80, 'UT': 10, 'OK': 2} nearest_state={'TX': 80, 'CO': 9, 'AZ': 3}
+[legal] n=117 nearest_nonlegal={'TX': 68, 'UT': 48, 'OK': 1} nearest_state={'CO': 64, 'AZ': 53}
+[interior] n=159 nearest_nonlegal={'TX': 124, 'UT': 35} nearest_state={'CO': 75, 'TX': 52, 'AZ': 32}

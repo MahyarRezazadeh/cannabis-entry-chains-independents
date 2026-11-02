@@ -1,0 +1,58 @@
+{
+  "legalization": {
+    "n_towns_affected": 28,
+    "n_town_quarters": 252,
+    "baseline_NI": 1245.2923164245674,
+    "baseline_NC": 426.7155407857538,
+    "postcf_NI": 727.2442912138949,
+    "postcf_NC": 314.35237359945864,
+    "delta_NI": -518.0480252106724,
+    "delta_NC": -112.36316718629513,
+    "delta_Ntotal": -630.4111923969676,
+    "delta_NI_ci": [
+      -1070.4220549252702,
+      -288.43232405436623
+    ],
+    "delta_NC_ci": [
+      -802.2957441622171,
+      -51.67916437777306
+    ],
+    "delta_Ntotal_ci": [
+      -1870.1644670760322,
+      -344.6788640585548
+    ],
+    "indep_share_delta_mean": -0.015885250500200437,
+    "indep_share_delta_ci": [
+      -0.10260635291188733,
+      0.14499278456875137
+    ],
+    "share_boot_absI_gt_absC": 1.0,
+    "baseline_indep_share": 0.7447885553015811,
+    "postcf_indep_share": 0.6982014399443298
+  },
+  "no_heterogeneity": {
+    "delta_I": 0.051689693989260876,
+    "delta_C": 0.009428937711453249,
+    "delta_bar": 0.030559315850357063,
+    "baseline_indep_share": 0.7447885553015811,
+    "eqdelta_indep_share": 0.7029098649949228,
+    "baseline_N": 1672.0078572103212,
+    "eqdelta_N": 1592.324207344963
+  },
+  "decomposition": {
+    "delta_NI": -518.0480252106724,
+    "delta_NC": -112.36316718629513,
+    "total_increment": -630.4111923969676,
+    "share_independent": 0.8217620998144645
+  },
+  "legal_validation": {
+    "n_train_towns": 57,
+    "n_test_towns": 21,
+    "actual_NI": 1.8412698412698412,
+    "actual_NC": 0.6031746031746031,
+    "actual_indep_share": 0.8037433155080214,
+    "pred_NI": 0.9012854109723484,
+    "pred_NC": 0.6203668718207673,
+    "pred_indep_share": 0.4726612531978741
+  }
+}

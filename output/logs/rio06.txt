@@ -1,0 +1,11 @@
+(1) additional C operators per 100 NL ZIPs, 2022Q2: 26.1 (boot SE 9.6) 95% CI [7.7, 45.2]
+(1) additional I operators per 100 NL ZIPs, 2022Q2: 6.1 (boot SE 9.1) 95% CI [-12.1, 24.1]
+(1) additional C-I operators per 100 NL ZIPs, 2022Q2: 20.0 (boot SE 4.6) 95% CI [10.7, 29.6]
+    fitted vs counterfactual operators per NL ZIP: chain 0.425 vs 0.163; independent 0.146 vs 0.084
+(2) Chain operators          2022Q2 +0.096 (0.203) | early +0.143 (0.175) | late +0.298 (0.151)*
+(2) Independent operators    2022Q2 +0.042 (0.254) | early +0.144 (0.156) | late +0.273 (0.120)**
+(2) Chain $-$ independent    2022Q2 +0.054 (0.297) | early -0.000 (0.228) | late +0.025 (0.154)
+    active ZIP-quarters 755 (59 ZIPs); active in 2022Q2: NL 19, LB 7
+(3) diffusion [life] 0.363(0.005), 0.409(0.043), 0.086(0.053), 0.570(0.049); dphi +0.484 (0.068)
+(3) diffusion [pre] 0.240(0.019), 1.198(2.406), 0.348(0.678), 0.795(0.338); dphi +0.447 (0.745)
+(3) diffusion [entry] 0.440(0.043), 0.082(0.017), 0.805(0.131), -0.015(0.046); dphi -0.821 (0.151)

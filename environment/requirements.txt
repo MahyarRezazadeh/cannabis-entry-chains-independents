@@ -1,0 +1,13 @@
+# Python 3.13.12 (Windows 11). Versions used to produce every result in the paper.
+numpy==2.5.0
+pandas==2.3.3
+scipy==1.18.0
+statsmodels==0.14.6
+matplotlib==3.11.0
+geopandas==1.1.4
+shapely==2.1.2
+pyproj==3.7.2
+requests==2.34.2
+openpyxl==3.1.5
+xlrd==2.0.2
+linearmodels==7.0

@@ -1,0 +1,18 @@
+[S0] log-likelihood: F -1289.4, EM -487.7, EN -674.8
+[S1] log-likelihood: F -1157.1, EM -459.3, EN -625.9
+[S2] log-likelihood: F -1132.2, EM -457.3, EN -617.3
+[S3] log-likelihood: F -1130.3, EM -457.2, EN -615.1
+[S3 entry F] const -7.378 (0.749); lL +0.462 (0.072); xB +0.085 (0.034); xLB -0.045 (0.035); log_density +0.145 (0.047); dabq +0.140 (0.116); dbig +0.458 (0.261); zbp +0.299 (0.097); tribal_centroid -0.343 (0.234); lNlag +0.833 (0.188); lN0 -0.269 (0.164); logt -0.376 (0.162); t -0.066 (0.027)
+[S3 entry EM] const -11.815 (1.534); lL +0.868 (0.136); xB -0.077 (0.035); xLB -0.324 (0.106); log_density +0.074 (0.067); dabq +0.314 (0.150); dbig +0.634 (0.321); zbp +0.403 (0.199); tribal_centroid +0.416 (0.467); lNlag +0.277 (0.326); lN0 +0.118 (0.233); logt -0.209 (0.220); t -0.115 (0.042)
+[S3 entry EN] const -9.727 (1.221); lL +0.464 (0.100); xB +0.055 (0.052); xLB -0.143 (0.050); log_density +0.090 (0.065); dabq +0.082 (0.203); dbig +0.487 (0.341); zbp +0.436 (0.085); tribal_centroid -0.217 (0.227); lNlag +0.909 (0.168); lN0 -0.424 (0.145); logt +0.350 (0.356); t -0.037 (0.038)
+[exit logit] const -4.236 (0.497); lN +0.218 (0.071); xB -0.005 (0.016); lL -0.073 (0.056); logt +0.791 (0.075)
+[revenue] sigma = 0.806 (SE 0.104); N = 1745 ZIP-quarters, 31 counties
+[ZIP FE Poisson, F] log(1+N_lag) -1.051 (0.403); ZIPs 119
+[ZIP FE Poisson, E] log(1+N_lag) -0.887 (0.151); ZIPs 119
+[fit S0] OOS 2026Q2 ZIP RMSE 1.62 (in-sample path 2.53); OOS openings pred 305 vs obs 330; 2026Q2 stock pred interior 456/350, legal 60/55, nonlegal 234/235; NL/LB revenue-per-resident ratio pred 2.78 vs obs 2.84; density gradient pred 0.023 vs obs 0.022
+[fit S1] OOS 2026Q2 ZIP RMSE 1.55 (in-sample path 1.81); OOS openings pred 305 vs obs 330; 2026Q2 stock pred interior 430/350, legal 49/55, nonlegal 264/235; NL/LB revenue-per-resident ratio pred 3.17 vs obs 2.84; density gradient pred 0.047 vs obs 0.022
+[fit S2] OOS 2026Q2 ZIP RMSE 1.45 (in-sample path 1.84); OOS openings pred 270 vs obs 330; 2026Q2 stock pred interior 409/350, legal 46/55, nonlegal 258/235; NL/LB revenue-per-resident ratio pred 3.31 vs obs 2.84; density gradient pred 0.047 vs obs 0.022
+[fit S3] OOS 2026Q2 ZIP RMSE 1.42 (in-sample path 1.90); OOS openings pred 242 vs obs 330; 2026Q2 stock pred interior 393/350, legal 44/55, nonlegal 251/235; NL/LB revenue-per-resident ratio pred 3.34 vs obs 2.84; density gradient pred 0.041 vs obs 0.022
+[composition, in-sample S3] predicted shares F/EM/EN by group: interior 0.56/0.22/0.22; legal 0.64/0.13/0.22; nonlegal 0.65/0.12/0.23 | observed interior 0.56/0.21/0.23; legal 0.64/0.16/0.20; nonlegal 0.65/0.12/0.23
+[timing] mean quarter of EM openings: pred 5.75, obs 5.72; EN: pred 9.39, obs 9.30
+[continuing-store check] implied elasticity of revenue per store to the store count: sigma - 1 = -0.194; continuing-store elasticity to rivals within 2/5 km (rio03): -0.24 / -0.32

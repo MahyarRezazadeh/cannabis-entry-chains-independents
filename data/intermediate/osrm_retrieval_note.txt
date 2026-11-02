@@ -1,0 +1,1 @@
+OSRM table service, router.project-osrm.org, car profile; retrieved 2026-10-23; 368 NM ZIP centroids x 277 TX/OK/UT ZIP centroids within 150 straight-line miles; seconds.

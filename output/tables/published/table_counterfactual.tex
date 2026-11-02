@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+\centering
+\caption{Model-implied dispensary-revenue benchmark, Colorado border counties, 2024}
+\label{tab:counterfactual}
+\footnotesize
+\begin{tabular}{lc}
+\toprule
+Quantity & Value \\
+\midrule
+Dispensary-density interaction coefficient $\theta$ & $-0.932$ \\
+Free-entry benchmark multiplier $e^{-\theta}$ & 2.54 \\
+\midrule
+Actual 2024 revenue, CO border counties & \$324.2 M \\
+Free-entry-benchmark counterfactual revenue (NM) & \$823.0 M \\
+Model-implied additional dispensary revenue & +\$498.8 M \\
+95\% county-cluster bootstrap interval & (\$-1.5 M, +\$2{,}526.0 M) \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.5em}
+
+\fontsize{9pt}{11pt}\selectfont
+\textit{Notes:} The benchmark uses the \emph{dispensary-density} interaction
+($\theta=-0.932$, Table~\ref{tab:regime_interaction}), the outcome for which the
+difference across entry regimes is statistically significant. It asks how much
+more dispensary revenue Colorado's border counties would have generated in 2024
+if their density border premium had matched New Mexico's rather than the
+restricted-entry premium, holding revenue per store at its observed Colorado
+level. The multiplier $e^{-\theta}$ is applied to each Colorado border county's
+own 2024 dispensary revenue and summed; New Mexico is the free-entry benchmark
+state and contributes only to the estimation of $\theta$. Colorado is restricted
+to 2022Q2 onward (Section~\ref{sec:crossstate}). The bootstrap interval resamples
+counties with replacement within each of the two states (500 replicates),
+refitting the density regression each time; it is wide and reaches down to zero
+because $\theta$ is only marginally significant ($p\approx0.06$). The dollar
+figure should therefore be read as an illustrative benchmark rather than an
+identified estimate of foregone revenue.
+\end{minipage}
+\end{table}

@@ -1,0 +1,53 @@
+
+=== Statewide operators with >=1 medical incumbent: 75 operators, 226 medical-incumbent storefronts ===
+                    operators  med_storefronts  stores_open  stores_added
+open_type expanded                                                       
+single    False            25               25           25             0
+          True             13               13           13            26
+multi     False             9               31           32             0
+          True             28              157          176           134
+lifetime chain (>=2 storefronts ever): 50 of 75 operators (67%); holding 201 of 226 med storefronts (89%)
+single at opening: 38; later expanded (became chain): 13 (34%); stayed single: 25
+multi at opening: 37; later added stores: 28 (76%); stores added by them: 134
+distribution of storefronts ever (operators): {1: 25, 2: 10, 3: 7, 4: 7, 5: 4, 6: 3, 7: 2, 8: 1, 9: 2, 10: 5, 12: 1, 15: 1, 16: 1, 17: 2, 19: 1, 22: 1, 29: 1, 37: 1}
+
+=== Operators with a medical incumbent in the 209 border ZIPs: 31 operators, 141 medical-incumbent storefronts ===
+                    operators  med_storefronts  stores_open  stores_added
+open_type expanded                                                       
+single    False             7                7            7             0
+          True              4                4            4             4
+multi     False             6               21           21             0
+          True             14              109          126            81
+lifetime chain (>=2 storefronts ever): 24 of 31 operators (77%); holding 134 of 141 med storefronts (95%)
+single at opening: 11; later expanded (became chain): 4 (36%); stayed single: 7
+multi at opening: 20; later added stores: 14 (70%); stores added by them: 81
+distribution of storefronts ever (operators): {1: 7, 2: 6, 3: 3, 4: 2, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 12: 1, 15: 1, 16: 1, 17: 1, 19: 1, 22: 1, 29: 1, 37: 1}
+
+=== Operators with a medical incumbent in nonlegal-border ZIPs: 25 operators, 123 medical-incumbent storefronts ===
+                    operators  med_storefronts  stores_open  stores_added
+open_type expanded                                                       
+single    False             5                5            5             0
+          True              4                4            4             4
+multi     False             2                5            5             0
+          True             14              109          126            81
+lifetime chain (>=2 storefronts ever): 20 of 25 operators (80%); holding 118 of 123 med storefronts (96%)
+single at opening: 9; later expanded (became chain): 4 (44%); stayed single: 5
+multi at opening: 16; later added stores: 14 (88%); stores added by them: 81
+distribution of storefronts ever (operators): {1: 5, 2: 5, 3: 3, 7: 1, 8: 1, 9: 1, 10: 1, 12: 1, 15: 1, 16: 1, 17: 1, 19: 1, 22: 1, 29: 1, 37: 1}
+
+=== Operators with a medical incumbent in legal-border ZIPs: 8 operators, 60 medical-incumbent storefronts ===
+                    operators  med_storefronts  stores_open  stores_added
+open_type expanded                                                       
+single    False             2                2            2             0
+multi     False             4               16           16             0
+          True              2               42           46             6
+lifetime chain (>=2 storefronts ever): 6 of 8 operators (75%); holding 58 of 60 med storefronts (97%)
+single at opening: 2; later expanded (became chain): 0 (0%); stayed single: 2
+multi at opening: 6; later added stores: 2 (33%); stores added by them: 6
+distribution of storefronts ever (operators): {1: 2, 2: 1, 4: 2, 6: 1, 15: 1, 37: 1}
+
+=== Comparison: 573 operators with no medical incumbent ===
+lifetime chain: 126 (22%); mean storefronts ever 1.44 vs 5.41 for med operators
+share of operators that ever add a storefront after their first: med 55%
+
+Post-2022Q2 storefronts opened by medical operators: 160; by group: {'interior': 106, 'nonlegal': 44, 'legal': 10}

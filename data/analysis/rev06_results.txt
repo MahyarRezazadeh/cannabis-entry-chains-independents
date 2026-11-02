@@ -1,0 +1,17 @@
+Town-level restricted estimates (bootstrap SE, 95% CI):
+  kappa_I: -4.2623 (0.3436) [-5.0000, -3.8096]
+  kappa_C: -5.0000 (0.0361) [-5.0000, -4.8878]
+  beta_I(logpop): +1.0743 (0.1875) [+0.8020, +1.4744]
+  beta_C(logpop): +0.8100 (0.1316) [+0.5412, +0.9886]
+  delta_I(logB75): +0.0517 (0.0176) [+0.0292, +0.0902]
+  delta_C(logB75): +0.0094 (0.0175) [+0.0000, +0.0637]
+  gamma_same: +0.0082 (0.0052) [+0.0048, +0.0230]
+  gamma_other: -0.0283 (0.0261) [-0.0843, -0.0007]
+Robustness specs (delta_I, delta_C, gamma_same, gamma_other):
+  baseline: 0.0517 0.0094 0.0082 -0.0283
+  R1 ring-B: 0.0222 0.0027 0.0069 -0.0406
+  R2 drop LC/SF: 0.0566 0.0331 0.0099 -0.0870
+  R3 eventual chain: 0.0891 0.0177 0.0139 -0.0192
+  R4 full mature: 0.0478 0.0000 0.0136 -0.0282
+Counterfactual: dNI -518.0 [-1070.4220549252702, -288.43232405436623], dNC -112.4 [-802.2957441622171, -51.67916437777306]; independent share of increment 0.822; baseline independent share 0.745; change in independent share -0.016 [-0.10260635291188733, 0.14499278456875137]
+Residual corr(asinh N_I, asinh N_C | log pop, exposure, quarter FE), at-entry store counts, 209 ZIPs: 0.646 (ZIP-quarters with any store: 0.441)

@@ -1,0 +1,43 @@
+A. Revenue streams (209 ZIPs, 2022Q2-2026Q2)
+  medical share of revenue: all 0.179; NL 0.178; LB 0.185
+  Total     asinh rpc gap +0.835 (0.263)*** | log rps gap +0.260 (0.199) | PPML +0.892 (0.281) ratio 2.44 | decomposition total 1.043 [0.60,1.64] = density 0.757 + rev/store 0.286 [-0.08,0.74]; density share 0.73 [0.50,1.11]
+  Adult-use asinh rpc gap +0.799 (0.254)*** | log rps gap +0.260 (0.236) | PPML +0.980 (0.298) ratio 2.66 | decomposition total 1.052 [0.54,1.71] = density 0.757 + rev/store 0.295 [-0.14,0.77]; density share 0.72 [0.44,1.19]
+  Medical   asinh rpc gap +0.541 (0.160)*** | log rps gap +0.130 (0.232) | PPML +0.375 (0.354) ratio 1.45 | decomposition total 1.004 [0.50,1.83] = density 0.757 + rev/store 0.248 [-0.02,0.78]; density share 0.75 [0.53,1.04]
+  stores that were NOT medical incumbents only: rpc gap +0.821 (0.237)***, density gap +0.105 (0.042)**
+
+B. Quarterly PPML (coefficient, ratio) and level gaps
+  2022Q2 revenue PPML +0.786 (0.331) x2.19 | stores PPML +0.622 (0.332) x1.86 | $/resident +7.2 (4.1)
+  2022Q3 revenue PPML +0.781 (0.304) x2.18 | stores PPML +0.485 (0.274) x1.62 | $/resident +10.0 (5.2)
+  2022Q4 revenue PPML +0.937 (0.286) x2.55 | stores PPML +0.589 (0.267) x1.80 | $/resident +14.4 (5.2)
+  2023Q1 revenue PPML +0.912 (0.280) x2.49 | stores PPML +0.731 (0.237) x2.08 | $/resident +19.2 (7.2)
+  2023Q2 revenue PPML +0.902 (0.267) x2.46 | stores PPML +0.761 (0.267) x2.14 | $/resident +27.9 (9.6)
+  2023Q3 revenue PPML +0.836 (0.280) x2.31 | stores PPML +0.634 (0.259) x1.89 | $/resident +31.1 (11.6)
+  2023Q4 revenue PPML +0.934 (0.280) x2.55 | stores PPML +0.760 (0.267) x2.14 | $/resident +45.6 (14.7)
+  2024Q1 revenue PPML +0.944 (0.294) x2.57 | stores PPML +0.739 (0.259) x2.09 | $/resident +49.8 (17.8)
+  2024Q2 revenue PPML +0.933 (0.281) x2.54 | stores PPML +0.712 (0.259) x2.04 | $/resident +57.3 (21.5)
+  2024Q3 revenue PPML +0.851 (0.288) x2.34 | stores PPML +0.770 (0.274) x2.16 | $/resident +60.6 (22.2)
+  2024Q4 revenue PPML +0.917 (0.287) x2.50 | stores PPML +0.763 (0.239) x2.14 | $/resident +70.2 (24.3)
+  2025Q1 revenue PPML +0.883 (0.288) x2.42 | stores PPML +0.703 (0.253) x2.02 | $/resident +64.0 (24.8)
+  2025Q2 revenue PPML +0.906 (0.277) x2.47 | stores PPML +0.698 (0.258) x2.01 | $/resident +47.0 (18.1)
+  2025Q3 revenue PPML +0.833 (0.286) x2.30 | stores PPML +0.636 (0.206) x1.89 | $/resident +60.0 (29.4)
+  2025Q4 revenue PPML +0.897 (0.282) x2.45 | stores PPML +0.555 (0.231) x1.74 | $/resident +67.1 (31.6)
+  2026Q1 revenue PPML +0.898 (0.283) x2.45 | stores PPML +0.551 (0.230) x1.73 | $/resident +62.1 (32.2)
+  2026Q2 revenue PPML +0.952 (0.278) x2.59 | stores PPML +0.491 (0.220) x1.63 | $/resident +78.5 (37.9)
+  always-legal-border mean $/resident by quarter: 2022Q2 5.8, 2022Q3 8.0, 2022Q4 8.0, 2023Q1 10.5, 2023Q2 10.1, 2023Q3 13.6, 2023Q4 10.1, 2024Q1 11.2, 2024Q2 10.8, 2024Q3 13.6, 2024Q4 10.3, 2025Q1 14.9, 2025Q2 7.7, 2025Q3 17.6, 2025Q4 16.2, 2026Q1 20.0, 2026Q2 13.8
+
+C. Exposure measurement
+  [Revenue per resident] joint state-specific exposure: TX +0.168 (0.055)***; OK +0.307 (0.130)**; UT -0.356 (0.161)**
+  [Dispensaries per 1,000] joint state-specific exposure: TX +0.023 (0.008)**; OK +0.069 (0.022)***; UT -0.059 (0.025)**
+  ZIPs with any TX / OK / UT residents within 75 mi (209-ZIP sample): TX 85, OK 9, UT 10
+  threshold  1,000: NL 92 / LB 117 ZIPs | rpc +0.835 (0.263)*** | den +0.109 (0.045)** | rps +0.260 (0.199)
+  threshold    500: NL 107 / LB 116 ZIPs | rpc +0.808 (0.254)*** | den +0.101 (0.043)** | rps +0.198 (0.216)
+  threshold  2,500: NL 92 / LB 113 ZIPs | rpc +0.838 (0.269)*** | den +0.108 (0.046)** | rps +0.267 (0.203)
+  threshold  5,000: NL 84 / LB 109 ZIPs | rpc +0.935 (0.260)*** | den +0.131 (0.048)** | rps +0.122 (0.138)
+  threshold 10,000: NL 81 / LB 98 ZIPs | rpc +0.996 (0.293)*** | den +0.136 (0.054)** | rps +0.123 (0.150)
+  (check: 1,000 rule with this approximation keeps 209 ZIPs; the published groups use the state-line distance rule, 209 ZIPs)
+  ZIPs in the nonlegal group with >=1,000 CO/AZ residents within 75 mi: 14
+  Drop ZIPs exposed to both borders  ZIPs 195 | rpc +0.972 (0.260)*** | den +0.127 (0.048)** | rps +0.285 (0.209)
+  Control for longitude              ZIPs 209 | rpc +0.397 (0.200)* | den +0.042 (0.036) | rps +0.081 (0.125)
+  Cluster by town market             ZIPs 209 | rpc +0.835 (0.209)*** | den +0.109 (0.043)** | rps +0.260 (0.227)
+  town clusters: 198
+  correlation of longitude with the nonlegal indicator across ZIPs: 0.46
